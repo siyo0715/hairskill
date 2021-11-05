@@ -1,27 +1,10 @@
+<!--このページはbootstrapを多く含みます-->
 <div class="calendar">
-  <h1 class="top">カレンダー</h1>
+  <h1 class="calendar-top">カレンダー</h1>
   <br>
 
   <div class="row">
     <div class="col-md-4">
-      <div class="schedule">今後の予定一覧</div>
-      <table class="table">
-        <thead class="thead-light">
-          <tr>
-            <th>タイトル</th>
-            <th>日程</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @blogs.each do |blog| %>
-            <tr>
-              <td><%= link_to blog.title , blog_path(blog.id) %></td>
-              <td><%= blog.start_time.strftime("%m-%d") %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
 
       <%= form_with(model: @blog, local: true) do |form| %>
         <!--他のページでタイトルと内容にcssを当てているので<br>-->
@@ -48,7 +31,6 @@
 
       <br>
 
-      <br>
       <div class="col-md-8">
         <%= month_calendar events: @blogs do |date, blogs| %>
           <%= date.day %>
@@ -59,6 +41,24 @@
             </div>
           <% end %>
         <% end %>
+        <div class="schedule">今後の予定一覧</div>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>タイトル</th>
+            <th>日程</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @blogs.each do |blog| %>
+            <tr>
+              <td><%= link_to blog.title , blog_path(blog.id) %></td>
+              <td><%= blog.start_time.strftime("%m-%d") %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
       </div>
     </div>
   </div>

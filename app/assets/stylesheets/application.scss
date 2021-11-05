@@ -24,7 +24,15 @@ body {
   border: 0;
   font-size: 100%;
   min-height: 100vh;
-  background-color: gray;
+  background-color: black;
+}
+.good {
+  background-color: olive;
+  color: snow;
+}
+.bad {
+  background-color: red;
+  color: snow;
 }
 .header {
   display: flex;
@@ -72,7 +80,7 @@ nav{
 .top-image-box {
   margin-left: 0;
   margin-right: 0;
-  max-width: 100% !important;
+  max-width: 100%
 }
 .footer{
   height: 150px;

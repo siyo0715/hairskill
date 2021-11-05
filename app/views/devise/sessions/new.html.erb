@@ -1,49 +1,51 @@
-<h2 class="midashi_n">Log in</h2>
-<div class= "post_profile">
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="p_user_zone">
+  <h2 class="midashi_n">Log in</h2>
+  <div class= "post_profile">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-    <div class="field">
-      <%= f.label :last_name %><br />
-      <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "令和", class: "post_zone" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :first_name %><br />
-      <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name_field", placeholder: "太郎", autofocus: true, class: "post_zone" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :phone_number %><br />
-      <%= f.phone_field :phone_number, autofocus: true, autocomplete: "phone_number", placeholder: "電話番号を入力してください", class: "post_zone" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "yamada2tr@gmail.com", class: "post_zone" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password", placeholder: "英数字含む8桁のパスワード", class: "post_zone" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "同じをパスワード入力してください", class: "post_zone" %>
-    </div>
-
-    <% if devise_mapping.rememberable? %>
       <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
+        <%= f.label :last_name %><br />
+        <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "令和", class: "post_zone" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :first_name %><br />
+        <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name_field", placeholder: "太郎", autofocus: true, class: "post_zone" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :phone_number %><br />
+        <%= f.phone_field :phone_number, autofocus: true, autocomplete: "phone_number", placeholder: "電話番号を入力してください", class: "post_zone" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "yamada2tr@gmail.com", class: "post_zone" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "英数字含む8桁のパスワード", class: "post_zone" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "同じをパスワード入力してください", class: "post_zone" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+        <div class="actions">
+          <%= f.submit "Log in", class:"nice_btn" %>
+        </div>
       </div>
     <% end %>
 
-      <div class="actions">
-        <%= f.submit "Log in", class:"nice_btn" %>
-      </div>
-    </div>
-  <% end %>
-
-  <%= render "devise/shared/links" %>
+    <%= render "devise/shared/links" %>
+  </div>
 </div>

@@ -5,17 +5,13 @@ class BlogsController < ApplicationController
     @blog = Blog.new
   end
 
-  def new
-    @blog = Blog.new
-  end
-
   def show
     @blog = Blog.find(params[:id])
   end
 
   def create
     Blog.create(blog_parameter)
-    redirect_to blogs_path
+    redirect_to blogs_path, notice:"スケジュールが追加されました"
   end
 
   def destroy

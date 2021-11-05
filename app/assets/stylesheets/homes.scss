@@ -3,8 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+//-------------------------------
+// グラデーションカラー用のmixin↓|
+// ------------------------------
+@mixin g-c($color1,$color2) {
+  background: linear-gradient($color1, $color2);
+}
 // ーーーーーーーーーーーーーーーーーーーーーーーーー
-// オープニングシャッター用の最前面のレイヤー要素  ｜
+// オープニングシャッター用の最前面のレイヤー要素   ｜
+// 3秒間アニメーション指定している                  |
+// 光が走る間にコンテンツにはテーマ名を入れて表示  /
 // アニメーションで変形させて背面に移動↓          |
 // ーーーーーーーーーーーーーーーーーーーーーーーー
 .shutter {
@@ -13,9 +21,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #1e1e1e;
-  z-index: 9999;
-  animation: byeShutter 2.6s forwards;
+  background-color: black;
+  z-index: 10;
+  animation: disappear 3s forwards;
   &::before,
   &::after {
     content:'HairSkill';
@@ -24,25 +32,31 @@
     left: 0;
     bottom: 0;
     margin: auto;
+    color: #b5a58b;
+    font-size: 30px;
   }
   &::before {
-    background-color:#b5a58b;
+    @include g-c( navy,indigo);
     width: 0;
-    height: 1px;
-    animation: shutterOpen1 2.6s forwards;
+    height: 5px;
+    animation: wakeup_page1 3s forwards;
   }
   &::after {
-    width: 120%;
+    width: 100%;
     height: 0;
-    margin-left: -10%;
-    background-color: #f3f3f3;
-    animation: shutterOpen2 2.6s forwards;
+    @include g-c( gold,coral);
+    animation: wakeup_page2 3s forwards;
   }
 }
 .content {
-  animation: contentScale 2.6s forwards;
+  animation: getup-page 3s forwards;
 }
-@keyframes byeShutter{
+// -------------------------------------------
+// 100%になったとき                          |
+// z-index: -1になり（opacityも0）背面に移動 |
+// これがないと背面には回り込まない↓         |
+// -------------------------------------------
+@keyframes disappear{
   70% {
     opacity: 1;
   }
@@ -52,7 +66,7 @@
     z-index: -1;
   }
 }
-@keyframes shutterOpen1 {
+@keyframes wakeup_page1 {
   0% {
     width: 0;
     height: 1px;
@@ -70,35 +84,44 @@
     height: 100%;
   }
 }
-@keyframes shutterOpen2 {
+// -----------------------------
+// rotateでくるっと角度を動かす |
+// 角度なので単位はdeg ↓        |
+// -----------------------------
+@keyframes wakeup_page2 {
   60% {
     width: 120%;
     height: 0;
     transform:rotate(5deg);
   }
   90% {
-    width: 120%;
+    width: 100%;
     height: 100%;
     transform: rotate(-5deg);
   }
   100% {
-    width: 120%;
+    width: 100%;
     height: 100%;
     transform:rotate(-5deg);
   }
 }
-@keyframes contentScale {
+// -------------------------------------------
+// perspectiveで起きあがるような動きにしている|
+// 最終的にはrotateX(0)にして角度を直す       |_
+//perspectiveの数値が小さいと画像がすごく伸びる↓|
+// ---------------------------------------------
+@keyframes getup-page {
   70% {
-    transform:perspective(800px) scale(0.9)
+    transform:perspective(500px) scale(0.9)
     rotateX(15deg);
   }
   100% {
-    transform:perspective(800px) scale(1)
+    transform:perspective(500px) scale(1)
     rotateX(0);
   }
 }
-
-.container {
+// ↓トップページ(sectionの中身)css
+.content {
   background-image: image-url('shutterstock_1038740494_4.jpg');
   background-repeat: no-repeat;
   min-height: 1100px;
@@ -121,4 +144,3 @@
     color: navy;
   }
 }
-

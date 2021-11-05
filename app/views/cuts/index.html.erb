@@ -1,2 +1,34 @@
-<h1>Cut#index</h1>
-<p>Find me in app/views/cut/index.html.erb</p>
+<!--このページはbootstrapを多く使用しています-->
+<div class="skill_page_zone">
+  <h1 class="cut">カット</h1>
+  <br>
+  <div class="row">
+    <div class="col-md-4 text-success">
+      <%= form_with model: @cut do |form| %>
+        <div class="daimei">
+          <div class="form-tag">タイトル</div>
+          <%= form.text_field :title %>
+        </div>
+
+        <div class="detail">
+          <div class="form-tag">詳細</div>
+          <%= form.text_field :detail %>
+        </div>
+      <p>
+        <div class="detail">
+          <div class="form-tag">写真</div>
+          <%= form.attachment_field :image %>
+        </div>
+      </p>
+        <div class="submit">
+          <%= form.submit %>
+        </div>
+      <% end %>
+    </div>
+
+    <br>
+
+    <div class="col-md-8">
+    </div>
+  </div>
+</div>
