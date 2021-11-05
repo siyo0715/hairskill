@@ -1,0 +1,45 @@
+<h2 class="midashi_n">Sign up</h2>
+  <div class= "post_profile">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.label :last_name %><br />
+      <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "令和", class: "post_zone" %>
+    </div>
+
+  　<div class="field">
+      <%= f.label :first_name %><br />
+      <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name_field", placeholder: "太郎", autofocus: true, class: "post_zone" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :phone_number %><br />
+      <%= f.phone_field :phone_number, autofocus: true, autocomplete: "phone_number", placeholder: "電話番号を入力してください", class: "post_zone" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "yamada2tr@gmail.com", class: "post_zone" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "英数字含む8桁のパスワード", class: "post_zone" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "同じをパスワード入力してください", class: "post_zone" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign up", class:"nice_btn" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>

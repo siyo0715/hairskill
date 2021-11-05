@@ -1,15 +1,104 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hariskill</title>
+    <title>HairSkill</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+      <div class="header">
+        <%= link_to root_path do %>
+          <span class="header-logo"><h1 class="title">HairSkill</h1></span>
+        <% end %>
+
+        <nav>
+          <ul>
+            <!--↓もしログインしていたら-->
+            <% if user_signed_in? %>
+              <li class="">
+                <%= link_to cuts_path, class:"h-seni" do %>
+                  <span>カット</span>
+                <% end %>
+              </li>
+              <li class="">
+                <%= link_to colors_path, class:"h-seni" do %>
+                  <span>カラー</span>
+                <% end %>
+              </li>
+              <li class="">
+                <%= link_to perms_path, class:"h-seni" do %>
+                  <span>パーマ</span>
+                <% end %>
+              </li>
+              <li class="">
+                <%= link_to users_index_path, class:"h-seni" do %>
+                  <span>インフォメーション</span>
+                <% end %>
+              </li>
+              <li class="">
+                <%= link_to contact_about_path, class:"h-seni" do %>
+                  <span>お問い合わせ</span>
+                <% end %>
+              </li>
+              <li class="">
+                <%= link_to blogs_path, class:"h-seni" do %>
+                  <span>カレンダー</span>
+                <% end %>
+              </li>
+              <li class="">
+                <%= link_to edit_user_registration_path, class:"h-seni" do %>
+                  <span>会員情報変更</span>
+                <% end %>
+              </li>
+              <li class="">
+                <%= link_to destroy_user_session_path, method: :delete, class:"h-seni" do %>
+                  <span>ログアウト</span>
+                <% end %>
+              </li>
+            <!--↓もしログインしていなかったら-->
+            <% else %>
+              <li class="">
+                <%= link_to new_user_registration_path, class:"h-seni" do %>
+                  <span>新規登録</span>
+                <% end %>
+              </li>
+              <li class="">
+                <%= link_to new_user_session_path, class:"h-seni" do %>
+                  <span>ログイン</span>
+                <% end %>
+              </li>
+              <li class="">
+                <%= link_to new_user_password_path, class:"h-seni" do %>
+                  <span>パスワードをお忘れですか？</span>
+                <% end %>
+              </li>
+              <li class="">
+                <%= link_to contact_about_path, class:"h-seni" do %>
+                  <span>お問い合わせ</span>
+                <% end %>
+              </li>
+              <% end %>
+            </ul>
+        </nav>
+      </div>
+    <% if flash[:notice] %>
+      <div class="good">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <div class="bad">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+
     <%= yield %>
+    <div class=footer>
+    </div>
   </body>
 </html>

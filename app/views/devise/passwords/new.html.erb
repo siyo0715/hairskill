@@ -1,0 +1,34 @@
+<p>
+  <h2>パスワードをお忘れですか？</h2>
+</p>
+<h3>パスワードを変更できますのでご安心ください。</h3>
+<p>
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+</p>
+    <div class="actions">
+      <%= f.submit "入力後こちらをクリック" %>
+    </div>
+  <% end %>
+<p>
+  <h3>
+    ボタンをクリックした後にメールが送信されます。<br>
+    メールを受信されましたら、<br>
+    パスワードの変更手続きをお願いします。</br>
+  </h3>
+</p>
+<p>
+  <h3>
+    メールが届かない場合はお手数ですが、<br>
+    アバウトページのお問い合わせフォームからご連絡をお願い致します。<br>
+    (対応には最大3日間ほどお待ちいただくこともございます。)</br>
+  </h3>
+</p>
+<p>
+  <%= render "devise/shared/links" %>
+</p>

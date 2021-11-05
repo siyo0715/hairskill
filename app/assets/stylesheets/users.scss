@@ -1,0 +1,35 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.midashi_n {
+  color: #0bd;
+}
+.post_profile {
+  background-color: #734E30;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+  .post_zone{
+    background-color: rgba(255,255,255,.5);
+    width: 300px;
+  }
+}
+.nice_btn {
+  padding: 15px 20px;
+  border-color: tan teal red rebeccapurple;
+  background-color: #0bd;
+  opacity: 0.8;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    color: whitesmoke;
+    background-color: blue;
+    box-shadow: 0 0 20px black;
+    &::before{
+      transform: none;
+    }
+  }
+}

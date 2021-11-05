@@ -1,0 +1,64 @@
+<div class="calendar">
+  <h1 class="top">カレンダー</h1>
+  <br>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="schedule">今後の予定一覧</div>
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>タイトル</th>
+            <th>日程</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @blogs.each do |blog| %>
+            <tr>
+              <td><%= link_to blog.title , blog_path(blog.id) %></td>
+              <td><%= blog.start_time.strftime("%m-%d") %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <%= form_with(model: @blog, local: true) do |form| %>
+        <!--他のページでタイトルと内容にcssを当てているので<br>-->
+        <!--(タイトル = taitoru) & (内容 = naiyouとしています。)-->
+        <div class="taitoru">
+          <div class="form-tag">タイトル</div>
+          <%= form.text_field :title %>
+        </div>
+
+        <div class="naiyou">
+          <div class="form-tag">内容</div>
+          <%= form.text_field :content %>
+        </div>
+
+        <div class="time">
+          <div class="form-tag">時間</div>
+          <%= form.datetime_select :start_time %>
+        </div>
+        <div class="submit">
+          <%= form.submit %>
+        </div>
+      <% end %>
+      </div>
+
+      <br>
+
+      <br>
+      <div class="col-md-8">
+        <%= month_calendar events: @blogs do |date, blogs| %>
+          <%= date.day %>
+
+          <% blogs.each do |blog| %>
+            <div>
+              <%= link_to blog.title,blog_path(blog.id) %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
