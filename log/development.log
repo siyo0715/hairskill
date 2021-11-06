@@ -4076,3 +4076,397 @@ Processing by ColorsController#show as HTML
 Completed 200 OK in 63ms (Views: 57.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/cuts" for 126.78.106.33 at 2021-11-06 11:32:13 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering cuts/index.html.erb within layouts/application
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT "cuts".* FROM "cuts"[0m
+  ↳ app/views/cuts/index.html.erb:42
+  Rendered cuts/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 108ms (Views: 103.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cuts/1" for 126.78.106.33 at 2021-11-06 11:32:17 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.2ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 62ms (Views: 56.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cuts/1" for 126.78.106.33 at 2021-11-06 11:35:41 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 62ms (Views: 56.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/colors" for 126.78.106.33 at 2021-11-06 11:35:49 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering colors/index.html.erb within layouts/application
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ app/views/colors/index.html.erb:42
+  Rendered colors/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 94ms (Views: 90.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:35:52 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 117ms (Views: 112.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:36:14 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 95ms (Views: 88.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:36:48 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 116ms (Views: 111.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:37:45 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 63ms (Views: 57.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:38:52 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 61ms (Views: 55.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:40:24 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 61ms (Views: 55.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:42:37 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2+)):
+    5:   <h3 class="text-success pt-3">詳細</h4><br>
+    6:   <h5><%= @color.detail %></h5>
+    7:   <h3 class=skill_image></h4><br>
+    8:   <%= attachment_image_tag @color.color_image %>
+    9: </div>
+  
+app/views/colors/show.html.erb:8:in `_app_views_colors_show_html_erb___821555506853600613_53202640'
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:43:29 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 67ms (Views: 62.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/11bd072bbdf6929277fe1156bf9447dfbf093395/store/b58c3f4a4e48d81dc812ec8c4dfec3b85f1b6b61c03092e7a53e74106fdc/color_image" for 126.78.106.33 at 2021-11-06 11:43:30 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-06 11:43:30 +0000] GET "/11bd072bbdf6929277fe1156bf9447dfbf093395/store/b58c3f4a4e48d81dc812ec8c4dfec3b85f1b6b61c03092e7a53e74106fdc/color_image" 200 263.7ms
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:46:20 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 69ms (Views: 63.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:46:39 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 59ms (Views: 54.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:47:14 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 110ms (Views: 104.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:47:43 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 63ms (Views: 57.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:47:58 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 71ms (Views: 58.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:48:11 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 61ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:48:23 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 59ms (Views: 53.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:49:55 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 67ms (Views: 61.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 126.78.106.33 at 2021-11-06 11:53:01 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts" for 126.78.106.33 at 2021-11-06 11:53:05 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering cuts/index.html.erb within layouts/application
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT "cuts".* FROM "cuts"[0m
+  ↳ app/views/cuts/index.html.erb:42
+  Rendered cuts/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 62ms (Views: 58.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cuts/1" for 126.78.106.33 at 2021-11-06 11:53:08 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 61ms (Views: 56.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/89c81b85de14b19dae2f721a8f37efb17c299225/store/d91e832aec5a55dfd9f374f010929712a6b38302bd94572ae524eba8d00c/cut_image" for 126.78.106.33 at 2021-11-06 11:53:08 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-06 11:53:08 +0000] GET "/89c81b85de14b19dae2f721a8f37efb17c299225/store/d91e832aec5a55dfd9f374f010929712a6b38302bd94572ae524eba8d00c/cut_image" 200 17.7ms
+
+Started GET "/colors" for 126.78.106.33 at 2021-11-06 11:53:10 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering colors/index.html.erb within layouts/application
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ app/views/colors/index.html.erb:42
+  Rendered colors/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 112ms (Views: 107.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/colors/1" for 126.78.106.33 at 2021-11-06 11:53:12 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ColorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mColor Load (0.1ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colors_controller.rb:9
+  Rendering colors/show.html.erb within layouts/application
+  Rendered colors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 67ms (Views: 57.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/perms" for 126.78.106.33 at 2021-11-06 11:53:14 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PermsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering perms/index.html.erb within layouts/application
+  [1m[36mPerm Load (0.2ms)[0m  [1m[34mSELECT "perms".* FROM "perms"[0m
+  ↳ app/views/perms/index.html.erb:42
+  Rendered perms/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/perms/1" for 126.78.106.33 at 2021-11-06 11:53:15 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PermsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mPerm Load (0.2ms)[0m  [1m[34mSELECT  "perms".* FROM "perms" WHERE "perms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/perms_controller.rb:9
+  Rendering perms/show.html.erb within layouts/application
+  Rendered perms/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 68ms (Views: 63.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/dcd18a4570bcccef5a2a219c1aa907cd7c538d98/store/2c8e90f8bc8b90d24c4a729600f446629f9b01913543da42b111410f669a/perm_image" for 126.78.106.33 at 2021-11-06 11:53:15 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-06 11:53:15 +0000] GET "/dcd18a4570bcccef5a2a219c1aa907cd7c538d98/store/2c8e90f8bc8b90d24c4a729600f446629f9b01913543da42b111410f669a/perm_image" 200 9.5ms
+
+Started GET "/" for 126.78.106.33 at 2021-11-06 11:54:16 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 126.78.106.33 at 2021-11-06 11:54:25 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 126.78.106.33 at 2021-11-06 11:54:33 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.2ms)
+
+
