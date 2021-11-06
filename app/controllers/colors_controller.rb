@@ -42,5 +42,5 @@ end
 private
 
 def color_parameter
-  params.require(:color).permit(:title, :detail, :color_image).merge(user_id: current_user.id)
+  params.require(:color).permit(:title, :detail, :evaluation, :color_image).merge(user_id: current_user.id)
 end

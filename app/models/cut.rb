@@ -4,5 +4,6 @@ class Cut < ApplicationRecord
 
   validates :title, presence: true
   validates :detail, presence: true
+  validates :evaluation, presence:true
   validates :cut_image, presence: true
 end

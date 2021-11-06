@@ -4,6 +4,11 @@
   <h3><%= @cut.title %></h4>
   <h3 class="text-success pt-3">詳細</h4><br>
   <h5><%= @cut.detail %></h5>
+  <h3 class="text-success pt-3">評価</h3>
+  <h5><%= @cut.evaluation %></h5>
   <h3 class=skill_image></h4><br>
-  <%= attachment_image_tag @cut, :cut_image ,size:'375x375' %>
+  <div><%= attachment_image_tag @cut, :cut_image ,size:'375x375' %></div>
+  <%= link_to '編集', edit_cut_path(@cut), class: "btn btn-primary m-4" %>
+  <%= link_to '消去',cut_path(@cut.id), class: "btn btn-danger m-4", method: :delete, data: { confirm: '本当に削除しますか?（失われたデータは元には戻りません）' } %>
+  <%= link_to '戻る', cuts_path, class: "btn btn-dark m-4" %>
 </div>

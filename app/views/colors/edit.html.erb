@@ -1,2 +1,24 @@
-<h1>Color#edit</h1>
-<p>Find me in app/views/color/edit.html.erb</p>
+<!--このページはbootstrapを主に使用しています-->
+<div class="skill_page_zone">
+  <%= form_with(model: @color, local: true) do |form| %>
+    <div class="daimei">
+      <h3 class="text-success pt-3">タイトル</h3></br>
+      <%= form.text_field :title %>
+    </div>
+
+    <div class="detail">
+      <h3 class="text-success pt-3">詳細</h3></br>
+      <%= form.text_field :detail %>
+    </div>
+
+    <div class="evaluation">
+      <h3 class="text-success pt-3"></h3>
+      <%= form.text_field :evaluation %>
+    </div>
+
+    <div class="submit">
+      <%= form.submit "編集", class:"nice_btn" %>
+      <% end %>
+      <%= link_to '戻る', colors_path, class: "btn btn-dark m-4" %>
+    </div>
+</div>

@@ -4,5 +4,6 @@ class Perm < ApplicationRecord
 
   validates :title, presence: true
   validates :detail, presence: true
+  validates :evaluation, presence:true
   validates :perm_image, presence: true
 end

@@ -19,6 +19,12 @@
           <div class="form-tag">写真</div>
           <%= form.attachment_field :color_image %>
         </div>
+
+        <div>
+          <div class="form-tag">評価</div>
+          <%= form.text_field :evaluation %>
+        </div>
+
       </p>
         <div class="submit">
           <%= form.submit %>
@@ -34,7 +40,6 @@
           <thead class="thead-dark">
             <tr>
               <th>タイトル</th>
-              <th>詳細</th>
               <th>投稿日時</th>
             </tr>
           </thead>
@@ -42,7 +47,6 @@
             <% @colors.each do |color| %>
               <tr>
                 <td><%= link_to color.title,color_path(color.id) %></td>
-                <td><%= color.detail %></td>
                 <td><%= color.created_at.strftime('%Y/%m/%d %H:%M') %></td>
               </tr>
             <% end %>

@@ -31,7 +31,7 @@ class CutsController < ApplicationController
   end
 
   def update
-    @cut = Genre.find(params[:id])
+    @cut = Cut.find(params[:id])
     if @cut.update(cut_parameter)
       redirect_to cuts_path, notice: "編集完了"
     else
@@ -43,5 +43,5 @@ end
 private
 
 def cut_parameter
-  params.require(:cut).permit(:title, :detail, :cut_image).merge(user_id: current_user.id)
+  params.require(:cut).permit(:title, :detail, :evaluation, :cut_image).merge(user_id: current_user.id)
 end

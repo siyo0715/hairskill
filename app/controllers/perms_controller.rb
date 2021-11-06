@@ -42,5 +42,5 @@ end
 private
 
 def perm_parameter
-  params.require(:perm).permit(:title, :detail, :perm_image).merge(user_id: current_user.id)
+  params.require(:perm).permit(:title, :detail, :evaluation, :perm_image).merge(user_id: current_user.id)
 end

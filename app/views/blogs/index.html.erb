@@ -47,6 +47,7 @@
           <tr>
             <th>タイトル</th>
             <th>日程</th>
+            <th>編集</th>
           </tr>
         </thead>
 
@@ -55,6 +56,7 @@
             <tr>
               <td><%= link_to blog.title , blog_path(blog.id) %></td>
               <td><%= blog.start_time.strftime("%m-%d") %></td>
+              <td><%= link_to '編集', edit_blog_path(blog), class: "btn btn-primary" %></td>
             </tr>
           <% end %>
         </tbody>
