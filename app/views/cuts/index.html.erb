@@ -1,4 +1,4 @@
-<!--このページはbootstrapを多く使用しています-->
+<!--このページはbootstrapを主に使用しています-->
 <div class="skill_page_zone">
   <h1 class="cut">カット</h1>
   <br>
@@ -15,9 +15,9 @@
           <%= form.text_field :detail %>
         </div>
       <p>
-        <div class="detail">
+        <div class="picture">
           <div class="form-tag">写真</div>
-          <%= form.attachment_field :image %>
+          <%= form.attachment_field :cut_image %>
         </div>
       </p>
         <div class="submit">
@@ -29,6 +29,25 @@
     <br>
 
     <div class="col-md-8">
+      <div class="cut_index">カットテーブル</div>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th>タイトル</th>
+              <th>詳細</th>
+              <th>投稿日時</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @cuts.each do |cut| %>
+              <tr>
+                <td><%= link_to cut.title,cut_path(cut.id) %></td>
+                <td><%= cut.detail %></td>
+                <td><%= cut.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+              </tr>
+            <% end %>
+          </tbody>
+      </table>
     </div>
   </div>
 </div>

@@ -1,4 +1,6 @@
 class CutsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @cuts = Cut.all
     @cut = Cut.new
@@ -9,8 +11,13 @@ class CutsController < ApplicationController
   end
 
   def create
-    Cut.create(Cut_parameter)
-    redirect_to cuts_path, notice:"投稿完了"
+    @cut = Cut.new(cut_parameter)
+    if @cut.save
+      redirect_to cuts_path, notice:"投稿完了"
+    else
+      @cuts = Cut.all
+      render 'index'
+    end
   end
 
   def destroy
@@ -36,5 +43,5 @@ end
 private
 
 def cut_parameter
-  params.require(:cut).permit(:title, :detail, :image)
+  params.require(:cut).permit(:title, :detail, :cut_image).merge(user_id: current_user.id)
 end

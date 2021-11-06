@@ -1,6 +1,6 @@
 class Perm < ApplicationRecord
   belongs_to :user
-  attachment :image
+  attachment :perm_image
 
   validates :title, presence: true
   validates :detail, presence: true

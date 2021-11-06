@@ -21,15 +21,6 @@ ActiveRecord::Schema.define(version: 2021_11_05_160236) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "calendars", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "title"
-    t.text "content"
-    t.datetime "start_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "colors", force: :cascade do |t|
     t.integer "user_id"
     t.string "title"
@@ -55,16 +46,6 @@ ActiveRecord::Schema.define(version: 2021_11_05_160236) do
     t.string "title"
     t.text "detail"
     t.string "cut_image_id"
-    t.integer "evaluation"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "genres", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "title"
-    t.text "detail"
-    t.string "image_id"
     t.integer "evaluation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

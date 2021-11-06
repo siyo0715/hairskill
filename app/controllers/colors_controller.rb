@@ -1,4 +1,5 @@
 class ColorsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @colors = Color.all
     @color = Color.new
@@ -9,8 +10,13 @@ class ColorsController < ApplicationController
   end
 
   def create
-    Color.create(color_parameter)
-    redirect_to colors_path, notice:"投稿完了"
+    @color = Color.new(color_parameter)
+    if @color.save
+      redirect_to colors_path, notice:"投稿完了"
+    else
+      @color = Color.all
+      render 'index'
+    end
   end
 
   def destroy
@@ -36,5 +42,5 @@ end
 private
 
 def color_parameter
-  params.require(:color).permit(:title, :detail, :image)
+  params.require(:color).permit(:title, :detail, :color_image).merge(user_id: current_user.id)
 end

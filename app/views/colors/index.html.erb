@@ -1,2 +1,53 @@
-<h1>Color#index</h1>
-<p>Find me in app/views/color/index.html.erb</p>
+<!--このページはbootstrapを主に使用しています-->
+<div class="skill_page_zone">
+  <h1 class="color">カラー</h1>
+  <br>
+  <div class="row">
+    <div class="col-md-4 text-success">
+      <%= form_with model: @color do |form| %>
+        <div class="daimei">
+          <div class="form-tag">タイトル</div>
+          <%= form.text_field :title %>
+        </div>
+
+        <div class="detail">
+          <div class="form-tag">詳細</div>
+          <%= form.text_field :detail %>
+        </div>
+      <p>
+        <div class="detail">
+          <div class="form-tag">写真</div>
+          <%= form.attachment_field :color_image %>
+        </div>
+      </p>
+        <div class="submit">
+          <%= form.submit %>
+        </div>
+      <% end %>
+    </div>
+
+    <br>
+
+    <div class="col-md-8">
+      <div class="color_index">カラーテーブル</div>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th>タイトル</th>
+              <th>詳細</th>
+              <th>投稿日時</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @colors.each do |color| %>
+              <tr>
+                <td><%= link_to color.title,color_path(color.id) %></td>
+                <td><%= color.detail %></td>
+                <td><%= color.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+              </tr>
+            <% end %>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>

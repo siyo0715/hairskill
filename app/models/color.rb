@@ -1,6 +1,6 @@
 class Color < ApplicationRecord
   belongs_to :user
-  attachment :image
+  attachment :color_image
 
   validates :title, presence: true
   validates :detail, presence: true

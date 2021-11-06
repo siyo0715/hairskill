@@ -1,4 +1,5 @@
 class PermsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @perms = Perm.all
     @perm = Perm.new
@@ -9,8 +10,13 @@ class PermsController < ApplicationController
   end
 
   def create
-    Perm.create(perm_parameter)
-    redirect_to perms_path, notice:"投稿完了"
+    @perm = Perm.new(perm_parameter)
+    if @perm.save
+      redirect_to perms_path, notice:"投稿完了"
+    else
+      @perms = Perm.all
+      render 'index'
+    end
   end
 
   def destroy
@@ -36,5 +42,5 @@ end
 private
 
 def perm_parameter
-  params.require(:perm).permit(:title, :detail, :image)
+  params.require(:perm).permit(:title, :detail, :perm_image).merge(user_id: current_user.id)
 end

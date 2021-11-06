@@ -27,7 +27,7 @@ body {
   background-color: black;
 }
 .good {
-  background-color: olive;
+  background-color: black;
   color: snow;
 }
 .bad {
@@ -89,13 +89,13 @@ nav{
   border: 5px solid silver;
 }
 @media screen and (max-width: 900px) {
-body {
-  width: 100%;
-}
-.header {
-  width: 100%;
-}
-.container{
-  width: 100%;
-}
+  body {
+    width: 100%;
+  }
+  .header {
+    width: 100%;
+  }
+  .container{
+    width: 100%;
+  }
 }
