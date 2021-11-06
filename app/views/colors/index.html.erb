@@ -14,15 +14,16 @@
           <div class="form-tag">詳細</div>
           <%= form.text_field :detail %>
         </div>
+
+        <div>
+          <div class="form-tag">自己評価点数</div>
+          <%= form.number_field :evaluation, placeholder: "数字入力" %>
+        </div>
+
       <p>
         <div class="detail">
           <div class="form-tag">写真</div>
           <%= form.attachment_field :color_image %>
-        </div>
-
-        <div>
-          <div class="form-tag">評価</div>
-          <%= form.text_field :evaluation %>
         </div>
 
       </p>
