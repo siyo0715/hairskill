@@ -1,23 +1,25 @@
-<!--このページはbootstrapを主に使用しています-->
-<div class="skill_page_zone">
-  <%= form_with(model: @perm, local: true) do |form| %>
-    <div class="daimei">
-      <h3 class="text-success pt-3">タイトル</h3></br>
-      <%= form.text_field :title %>
-    </div>
-    <div class="detail">
-      <h3 class="text-success pt-3">詳細</h3></br>
-      <%= form.text_field :detail %>
-    </div>
+<% if user_signed_in? %>
+  <!--このページはbootstrapを主に使用しています-->
+  <div class="skill_page_zone">
+    <%= form_with(model: @perm, local: true) do |form| %>
+      <div class="daimei">
+        <h3 class="text-success pt-3">タイトル</h3></br>
+        <%= form.text_field :title %>
+      </div>
+      <div class="detail">
+        <h3 class="text-success pt-3">詳細</h3></br>
+        <%= form.text_field :detail %>
+      </div>
 
-    <div class="evaluation">
-      <h3 class="text-success pt-3">評価</h3></br>
-      <%= form.number_field :evaluation %>
-    </div>
+      <div class="evaluation">
+        <h3 class="text-success pt-3">評価</h3></br>
+        <%= form.number_field :evaluation %>
+      </div>
 
-    <div class="submit">
-      <%= form.submit "編集", class:"nice_btn" %>
-      <% end %>
-      <%= link_to '戻る', colors_path, class: "btn btn-dark m-4" %>
-    </div>
-</div>
+      <div class="submit">
+        <%= form.submit "編集", class:"nice_btn" %>
+        <% end %>
+        <%= link_to '戻る', colors_path, class: "btn btn-dark m-4" %>
+      </div>
+  </div>
+<% end %>

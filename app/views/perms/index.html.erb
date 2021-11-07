@@ -1,56 +1,58 @@
-<!--このページはbootstrapを主に使用しています-->
-<div class="skill_page_zone">
-  <h1 class="perm">パーマ</h1>
-  <br>
-  <div class="row">
-    <div class="col-md-4 text-success">
-      <%= form_with model: @perm do |form| %>
-        <div class="daimei">
-          <div class="form-tag">タイトル</div>
-          <%= form.text_field :title %>
-        </div>
-
-        <div class="detail">
-          <div class="form-tag">詳細</div>
-          <%= form.text_field :detail %>
-        </div>
-
-        <div>
-          <div class="form-tag">自己評価点数</div>
-          <%= form.number_field :evaluation, placeholder: "数字入力" %>
-        </div>
-      <p>
-        <div class="detail">
-          <div class="form-tag">写真</div>
-          <%= form.attachment_field :perm_image %>
-        </div>
-      </p>
-        <div class="submit">
-          <%= form.submit %>
-        </div>
-      <% end %>
-    </div>
-
+<% if user_signed_in? %>
+  <!--このページはbootstrapを主に使用しています-->
+  <div class="skill_page_zone">
+    <h1 class="perm">パーマ</h1>
     <br>
+    <div class="row">
+      <div class="col-md-4 text-success">
+        <%= form_with model: @perm do |form| %>
+          <div class="daimei">
+            <div class="form-tag">タイトル</div>
+            <%= form.text_field :title %>
+          </div>
 
-    <div class="col-md-8">
-      <div class="perm_index">パーマテーブル</div>
-        <table class="table">
-          <thead class="thead-dark">
-            <tr>
-              <th>タイトル</th>
-              <th>投稿日時</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @perms.each do |perm| %>
+          <div class="detail">
+            <div class="form-tag">詳細</div>
+            <%= form.text_field :detail %>
+          </div>
+
+          <div>
+            <div class="form-tag">自己評価点数</div>
+            <%= form.number_field :evaluation, placeholder: "数字入力" %>
+          </div>
+        <p>
+          <div class="detail">
+            <div class="form-tag">写真</div>
+            <%= form.attachment_field :perm_image %>
+          </div>
+        </p>
+          <div class="submit">
+            <%= form.submit %>
+          </div>
+        <% end %>
+      </div>
+
+      <br>
+
+      <div class="col-md-8">
+        <div class="perm_index">パーマテーブル</div>
+          <table class="table">
+            <thead class="thead-dark">
               <tr>
-                <td><%= link_to perm.title,perm_path(perm.id) %></td>
-                <td><%= perm.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+                <th>タイトル</th>
+                <th>投稿日時</th>
               </tr>
-            <% end %>
-          </tbody>
-      </table>
+            </thead>
+            <tbody>
+              <% @perms.each do |perm| %>
+                <tr>
+                  <td><%= link_to perm.title,perm_path(perm.id) %></td>
+                  <td><%= perm.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+                </tr>
+              <% end %>
+            </tbody>
+        </table>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
