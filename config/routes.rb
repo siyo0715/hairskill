@@ -14,6 +14,5 @@ Rails.application.routes.draw do
   # ↓お問い合わせ
   resources :contacts, only: [:create]
   get 'about' => "contacts#about",as: "contact_about"
-  post 'confirm' => "contacts#confirm",as: "contact_confirm"
-  post 'back' => "contacts#back" ,as: 'back'
+  post 'back' => "contacts#back" ,as: 'contact_back'
 end

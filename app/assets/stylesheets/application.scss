@@ -35,11 +35,13 @@ body {
   color: snow;
 }
 .header {
+  width: 100%;
   display: flex;
-  background-color:black;
+  background-color: black;
   border: 5px solid silver;
 }
 .header-logo {
+  width: 20%;
   font-family: Didot;
   }
   .title{
@@ -57,7 +59,7 @@ body {
   }
 }
 nav{
-  width: 100%;
+  width: 80%;
   background-color: brown;
   display: flex;
   align-items: center;
@@ -68,7 +70,7 @@ nav{
   margin: 0;
   .h-seni {
     color: snow;
-    font-size: 19px;
+    font-size: 16px;
     padding-left: 8px;
     &:active {
       color: plum;
@@ -88,14 +90,53 @@ nav{
   background-color:brown;
   border: 5px solid silver;
 }
-@media screen and (max-width: 900px) {
+@media (max-width: 600px) and (min-width: 0px) {
   body {
     width: 100%;
   }
   .header {
     width: 100%;
   }
-  .container{
+  .content{
+    width: 100%;
+  }
+  .top-image-box{
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 601px) {
+  body {
+    width: 100%;
+  }
+  .header {
+    width: 100%;
+    .nav {
+      width: 100%;
+    }
+  }
+  .content{
+    width: 100%;
+  }
+  .top-image-box{
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 801px) {
+  body {
+    width: 80%;
+  }
+  .header {
+    width: 100%;
+    .nav {
+      width: 100%;
+    }
+  }
+  .content{
+    width: 100%;
+  }
+  .top-image-box{
     width: 100%;
   }
 }

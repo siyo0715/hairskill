@@ -1,13 +1,25 @@
 class ContactsController < ApplicationController
   def about
-  end
-
-  def confirm
+    @contact = Contact.new
   end
 
   def create
+    @contact = Contact.new(contact_params)
+    # binding.pry
+    if @contact.save
+      ContactMailer.send_mail(@contact)
+      redirect_to root_path notice:"投稿完了"
+    end
   end
 
   def back
+    @contact = Contact.new(contact_params)
+    render 'contact_about'
+  end
+
+  private
+
+  def contact_params
+    params.require(:contact).permit(:email, :name, :phone_number, :subject, :message)
   end
 end
