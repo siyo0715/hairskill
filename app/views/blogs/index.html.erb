@@ -1,23 +1,22 @@
-<% if user_signed_in? %>
-<!--このページはbootstrapを主に使用しています-->
+ <!----他のページでタイトルと内容にcssを当てているので----->
+ <!--(タイトル = taitoru) & (内容 = naiyouとしています。)-->
+ <!--------このページはbootstrapを主に使用しています------->
   <div class="calendar">
   <h1 class="calendar-top">カレンダー</h1>
   <br>
-  <h5>ログイン:<span class="text-info"><%= current_user.last_name %></span>様</h5>
+  <h5 class="mt-2">ログイン:<span class="text-info"><%= current_user.last_name %></span>様</h5>
     <div class="row">
       <div class="col-md-4">
 
-      <%= form_with(model: @blog, local: true) do |form| %>
-        <!--他のページでタイトルと内容にcssを当てているので<br>-->
-        <!--(タイトル = taitoru) & (内容 = naiyouとしています。)-->
+      <%= form_with(model: @blog, remote: true) do |form| %>
         <div class="taitoru">
           <div class="form-tag mt-5">タイトル</div>
-          <%= form.text_field :title %>
+          <%= form.text_field :title, placeholder: "1~15文字" %>
         </div>
 
         <div class="naiyou">
           <div class="form-tag">内容</div>
-          <%= form.text_field :content %>
+          <%= form.text_area :content, size: '30x10', placeholder: "1~200文字" %>
         </div>
 
         <div class="time">
@@ -25,44 +24,26 @@
           <%= form.datetime_select :start_time %>
         </div>
         <div class="submit">
-          <%= form.submit %>
+          <p class="text-change">スケジュールを投稿しますか？</p>
+          <%= form.submit "投稿する" %>
         </div>
       <% end %>
       </div>
 
       <br>
 
-      <div class="col-md-8">
+      <div class="col-md-8 mb-5 ">
+        <div class="bg-dark text-white mb-5">今後の予定一覧</div>
         <%= month_calendar events: @blogs do |date, blogs| %>
           <%= date.day %>
 
           <% blogs.each do |blog| %>
             <div>
-              <%= link_to blog.title,blog_path(blog.id) %>
+                <%= link_to blog.title,blog_path(blog.id) %>
             </div>
           <% end %>
         <% end %>
-        <div class="schedule">今後の予定一覧</div>
-      <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th>タイトル</th>
-            <th>日程</th>
-            <th>編集</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @blogs.each do |blog| %>
-            <tr>
-              <td><%= link_to blog.title , blog_path(blog.id) %></td>
-              <td><%= blog.start_time.strftime("%m-%d") %></td>
-              <td><%= link_to '編集', edit_blog_path(blog), class: "btn btn-primary" %></td>
-            </tr>
-          <% end %>
-        </tbody>
       </table>
       </div>
     </div>
   </div>
-<% end %>

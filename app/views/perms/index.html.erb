@@ -1,19 +1,28 @@
-<% if user_signed_in? %>
-  <!--このページはbootstrapを主に使用しています-->
+  <!--他のページでタイトルと内容にcssを当てているので<br>-->
+  <!-----------------(タイトル = daimei) ------------------>
+  <!--このページはbootstrapを主に使用しています------------>
+
   <div class="skill_page_zone">
     <h1 class="perm">パーマ</h1>
     <br>
     <div class="row">
       <div class="col-md-4 text-success">
-        <%= form_with model: @perm do |form| %>
+
+        <% if @perm.errors.any? %>
+          <% @perm.errors.full_messages.each do |message| %>
+            <%= message %>
+          <% end %>
+        <% end %>
+
+        <%= form_with(model: @perm, local: true) do |form| %>
           <div class="daimei">
             <div class="form-tag">タイトル</div>
-            <%= form.text_field :title %>
+            <%= form.text_field :title, placeholder: "1~20文字" %>
           </div>
 
           <div class="detail">
             <div class="form-tag">詳細</div>
-            <%= form.text_field :detail %>
+            <%= form.text_area :detail, size: '30x10', placeholder: "1~500文字" %>
           </div>
 
           <div>
@@ -46,13 +55,15 @@
             <tbody>
               <% @perms.each do |perm| %>
                 <tr>
-                  <td><%= link_to perm.title,perm_path(perm.id) %></td>
-                  <td><%= perm.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+                  <%# if @perms.perm == current_user %>
+                    <td><%= link_to perm.title,perm_path(perm.id) %></td>
+                    <td><%= perm.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+                  <%# end %>
                 </tr>
               <% end %>
             </tbody>
-        </table>
+          </table>
+        <div class="ml-5"><%= paginate @perms %></div>
       </div>
     </div>
   </div>
-<% end %>

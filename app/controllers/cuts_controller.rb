@@ -2,36 +2,36 @@ class CutsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @cuts = Cut.all
+    @cuts = current_user.cuts.page(params[:page]).per(10).order('updated_at DESC')
     @cut = Cut.new
   end
 
   def show
-    @cut = Cut.find(params[:id])
+    @cut = current_user.cuts.find(params[:id])
   end
 
   def create
-    @cut = Cut.new(cut_parameter)
+    @cut = current_user.cuts.new(cut_parameter)
     if @cut.save
       redirect_to cuts_path, notice:"投稿完了"
     else
-      @cuts = Cut.all
+      @cuts = current_user.cuts.page(params[:page]).per(10).order('updated_at DESC')
       render 'index'
     end
   end
 
   def destroy
-    @cut = Cut.find(params[:id])
+    @cut = current_user.cuts.find(params[:id])
     @cut.destroy
     redirect_to cuts_path, notice:"削除完了"
   end
 
   def edit
-    @cut = Cut.find(params[:id])
+    @cut = current_user.cuts.find(params[:id])
   end
 
   def update
-    @cut = Cut.find(params[:id])
+    @cut = current_user.cuts.find(params[:id])
     if @cut.update(cut_parameter)
       redirect_to cuts_path, notice: "編集完了"
     else

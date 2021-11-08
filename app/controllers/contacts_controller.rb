@@ -5,7 +5,6 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    # binding.pry
     if @contact.save
       ContactMailer.send_mail(@contact)
       redirect_to root_path notice:"投稿完了"

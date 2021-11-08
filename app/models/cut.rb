@@ -2,8 +2,8 @@ class Cut < ApplicationRecord
   belongs_to :user
   attachment :cut_image
 
-  validates :title, presence: true
-  validates :detail, presence: true
+  validates :title, presence: true, length: { minimum: 1, maximum: 20 }
+  validates :detail, presence: true, length: { minimum: 1, maximum: 500 }
   validates :evaluation, presence:true
   validates :cut_image, presence: true
 end

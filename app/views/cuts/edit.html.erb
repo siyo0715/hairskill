@@ -1,4 +1,3 @@
-<% if user_signed_in? %>
   <!--このページはbootstrapを主に使用しています-->
   <div class="skill_page_zone">
     <%= form_with(model: @cut, local: true) do |form| %>
@@ -22,4 +21,3 @@
         <%= link_to '戻る', colors_path, class: "btn btn-dark m-4" %>
       </div>
   </div>
-<% end %>

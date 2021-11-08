@@ -1,4 +1,3 @@
-<% if user_signed_in? %>
 <!--このページはbootstrapを主に使用しています-->
 <div class="skill_page_zone">
   <h3 class="text-success pt-3">タイトル</h3></br>
@@ -13,4 +12,3 @@
   <%= link_to '消去',perm_path(@perm.id), class: "btn btn-danger m-4", method: :delete, data: { confirm: '本当に削除しますか?（失われたデータは元には戻りません）' } %>
   <%= link_to '戻る', perms_path, class: "btn btn-dark m-4" %>
 </div>
-<% end %>

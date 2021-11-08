@@ -1,36 +1,36 @@
 class ColorsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @colors = Color.all
+    @colors = current_user.colors.page(params[:page]).per(10).order('updated_at DESC')
     @color = Color.new
   end
 
   def show
-    @color = Color.find(params[:id])
+    @color = current_user.colors.find(params[:id])
   end
 
   def create
-    @color = Color.new(color_parameter)
+    @color = current_user.colors.new(color_parameter)
     if @color.save
       redirect_to colors_path, notice:"投稿完了"
     else
-      @color = Color.all
+       @colors = current_user.colors.page(params[:page]).per(10).order('updated_at DESC')
       render 'index'
     end
   end
 
   def destroy
-    @color = Color.find(params[:id])
+    @color = current_user.colors.find(params[:id])
     @color.destroy
     redirect_to colors_path, notice:"削除完了"
   end
 
   def edit
-    @color = Color.find(params[:id])
+    @color = current_user.colors.find(params[:id])
   end
 
   def update
-    @color = Color.find(params[:id])
+    @color = current_user.colors.find(params[:id])
     if @color.update(color_parameter)
       redirect_to colors_path, notice: "編集完了"
     else
