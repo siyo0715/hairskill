@@ -64,7 +64,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 gem 'kaminari'
-gem 'dotenv-rails'
 gem 'byebug'
 gem 'rails-i18n'
 gem 'simple_calendar', '~> 2.0'
@@ -74,4 +73,9 @@ gem 'jquery-rails'
 group :development, :test do
 gem 'rubocop', require: false
 gem 'bootstrap', '~> 4.1.1'
+end
+
+gem 'dotenv-rails'
+group :production do
+gem 'mysql2'
 end
