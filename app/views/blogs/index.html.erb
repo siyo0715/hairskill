@@ -8,7 +8,13 @@
     <div class="row">
       <div class="col-md-4">
 
-      <%= form_with(model: @blog, remote: true) do |form| %>
+      <% if @blog.errors.any? %>
+        <% @blog.errors.full_messages.each do |message| %>
+          <%= message %>
+        <% end %>
+      <% end %>
+
+      <%= form_with(model: @blog, local: true) do |form| %>
         <div class="taitoru">
           <div class="form-tag mt-5">タイトル</div>
           <%= form.text_field :title, placeholder: "1~15文字" %>

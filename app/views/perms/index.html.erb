@@ -55,10 +55,8 @@
             <tbody>
               <% @perms.each do |perm| %>
                 <tr>
-                  <%# if @perms.perm == current_user %>
                     <td><%= link_to perm.title,perm_path(perm.id) %></td>
                     <td><%= perm.created_at.strftime('%Y/%m/%d %H:%M') %></td>
-                  <%# end %>
                 </tr>
               <% end %>
             </tbody>

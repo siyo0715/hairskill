@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       ContactMailer.send_mail(@contact)
-      redirect_to root_path notice:"投稿完了"
+      redirect_to root_path
     end
   end
 
