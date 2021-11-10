@@ -1,16 +1,20 @@
   <!--このページはbootstrapを主に使用しています-->
   <div class="cut_page_zone">
     <div class="show">
-      <h3 class="text-success pt-3">タイトル</h3></br>
-      <h3 class="text-warning"><%= @cut.title %></h4>
-      <h3 class="text-success pt-3">詳細</h4><br>
-      <h5 class="text-warning"><%= @cut.detail %></h5>
-      <h3 class="text-success pt-3">評価</h3>
-      <h5 class="text-warning"><%= @cut.evaluation %></h5>
-      <h3 class=skill_image></h4><br>
-      <!--<div><%#= attachment_image_tag @cut, :cut_image ,size:'375x375' %></div>-->
+      <div class="cut-page-text-back text-center">
+        <h3 class="text-success pt-3">タイトル</h3></br>
+        <h3 class="text-warning"><%= @cut.title %></h4>
+        <h3 class="text-success pt-3">詳細</h4><br>
+        <h5 class="text-warning"><%= @cut.detail %></h5>
+        <h3 class="text-success pt-3">評価</h3>
+        <h5 class="text-warning"><%= @cut.evaluation %></h5>
+        <h3 class=skill_image></h4><br>
+      </div>
+      <%= attachment_image_tag @cut, :cut_image , class: 'd-block mx-auto cut-img mt-4' %>
+      <div class="text-center">
       <%= link_to '編集', edit_cut_path(@cut), class: "btn btn-primary m-4" %>
       <%= link_to '消去',cut_path(@cut.id), class: "btn btn-danger m-4", method: :delete, data: { confirm: '本当に削除しますか?（失われたデータは元には戻りません）' } %>
       <%= link_to '戻る', cuts_path, class: "btn btn-dark m-4" %>
+      </div>
     </div>
   </div>

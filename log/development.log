@@ -28860,3 +28860,552 @@ Processing by CutsController#show as HTML
 Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 126.78.106.33 at 2021-11-10 10:02:34 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 491ms (Views: 477.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cuts" for 126.78.106.33 at 2021-11-10 10:02:43 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering cuts/index.html.erb within layouts/application
+  [1m[36mCut Load (0.2ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? ORDER BY updated_at DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/cuts/index.html.erb:54
+  Rendered cuts/index.html.erb within layouts/application (436.0ms)
+Completed 200 OK in 520ms (Views: 478.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:02:47 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.2ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '4950346e257f12e037091bcdf52d3a9a780195cddb6ed87489e4fce39adf215989b4a05758105e7e0aa3c7e3e0c2af7985d89b67cc4a1cb096baa8358fdb5960'
+```
+
+):
+     8:       <h3 class="text-success pt-3">評価</h3>
+     9:       <h5 class="text-warning"><%= @cut.evaluation %></h5>
+    10:       <h3 class=skill_image></h4><br>
+    11:       <div><%= attachment_image_tag @cut, :cut_image ,size:'375x375' %></div>
+    12:       <%= link_to '編集', edit_cut_path(@cut), class: "btn btn-primary m-4" %>
+    13:       <%= link_to '消去',cut_path(@cut.id), class: "btn btn-danger m-4", method: :delete, data: { confirm: '本当に削除しますか?（失われたデータは元には戻りません）' } %>
+    14:       <%= link_to '戻る', cuts_path, class: "btn btn-dark m-4" %>
+  
+app/views/cuts/show.html.erb:11:in `_app_views_cuts_show_html_erb__1897462754473989887_70102744553520'
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:04:50 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = 'f7f117885549395080eac90e1524b0889a346ebfee745d1bbdc061c78fda7d941e5d946bdb06692834aec8338ba0d258f3f0daaf83f27186e37172f1408516d1'
+```
+
+):
+     8:       <h3 class="text-success pt-3">評価</h3>
+     9:       <h5 class="text-warning"><%= @cut.evaluation %></h5>
+    10:       <h3 class=skill_image></h4><br>
+    11:       <div><%= attachment_image_tag @cut, :cut_image ,size:'375x375' %></div>
+    12:       <%= link_to '編集', edit_cut_path(@cut), class: "btn btn-primary m-4" %>
+    13:       <%= link_to '消去',cut_path(@cut.id), class: "btn btn-danger m-4", method: :delete, data: { confirm: '本当に削除しますか?（失われたデータは元には戻りません）' } %>
+    14:       <%= link_to '戻る', cuts_path, class: "btn btn-dark m-4" %>
+  
+app/views/cuts/show.html.erb:11:in `_app_views_cuts_show_html_erb__1897462754473989887_70102737717140'
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:05:02 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 324ms (Views: 289.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/attachments/901362c86430def4e2654fab7910989e24717826/store/dc9527c500ca8b5d798a83a10fa7b8d02daa6d6aa09a930bc1301a9f989d/cut_image" for 126.78.106.33 at 2021-11-10 10:05:02 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-10 10:05:02 +0000] GET "/901362c86430def4e2654fab7910989e24717826/store/dc9527c500ca8b5d798a83a10fa7b8d02daa6d6aa09a930bc1301a9f989d/cut_image" 200 20.7ms
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:06:42 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 319ms (Views: 285.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:10:33 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 103ms (Views: 96.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:12:42 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3990ms (Views: 3985.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:13:05 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2591ms (Views: 2586.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:13:22 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2723ms (Views: 2718.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:13:42 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 53ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:13:59 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts" for 126.78.106.33 at 2021-11-10 10:14:28 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering cuts/index.html.erb within layouts/application
+  [1m[36mCut Load (0.2ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? ORDER BY updated_at DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/cuts/index.html.erb:54
+  Rendered cuts/index.html.erb within layouts/application (142.7ms)
+Completed 200 OK in 185ms (Views: 181.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cuts/8" for 126.78.106.33 at 2021-11-10 10:14:30 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 44ms (Views: 39.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/ae71a7567202a2de57e783d523d3522ef07ab8f6/store/facac705f840e91c36b2a6c0e8a6201519f85bdb22ba9199cff086103761/cut_image" for 126.78.106.33 at 2021-11-10 10:14:30 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-10 10:14:30 +0000] GET "/ae71a7567202a2de57e783d523d3522ef07ab8f6/store/facac705f840e91c36b2a6c0e8a6201519f85bdb22ba9199cff086103761/cut_image" 200 8.6ms
+
+Started GET "/cuts/7" for 126.78.106.33 at 2021-11-10 10:14:37 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/b224abd2931fc99a7c314931517c1a0044b49fbb/store/3cf6dd9b69e21478d0aef3881a74477bc7c1badb7c6bf5f91962a81ae548/cut_image" for 126.78.106.33 at 2021-11-10 10:14:37 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-10 10:14:37 +0000] GET "/b224abd2931fc99a7c314931517c1a0044b49fbb/store/3cf6dd9b69e21478d0aef3881a74477bc7c1badb7c6bf5f91962a81ae548/cut_image" 200 4.8ms
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:14:43 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 44ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:15:07 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2671ms (Views: 2666.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:15:48 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:16:58 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:17:18 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 60ms (Views: 55.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:18:47 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2614ms (Views: 2609.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:20:08 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2676ms (Views: 2672.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:20:20 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2654ms (Views: 2649.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:20:31 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2648ms (Views: 2643.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:21:42 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2647ms (Views: 2642.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:21:58 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2753ms (Views: 2748.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:22:31 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 3756ms (Views: 3722.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:23:26 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/901362c86430def4e2654fab7910989e24717826/store/dc9527c500ca8b5d798a83a10fa7b8d02daa6d6aa09a930bc1301a9f989d/cut_image" for 126.78.106.33 at 2021-11-10 10:23:26 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-10 10:23:26 +0000] GET "/901362c86430def4e2654fab7910989e24717826/store/dc9527c500ca8b5d798a83a10fa7b8d02daa6d6aa09a930bc1301a9f989d/cut_image" 200 13.3ms
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:24:32 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2780ms (Views: 2775.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:24:44 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2791ms (Views: 2787.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:27:32 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:28:16 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2654ms (Views: 2649.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:28:30 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2636ms (Views: 2632.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:29:48 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2672ms (Views: 2667.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:30:21 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2651ms (Views: 2647.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:32:23 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 46ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:33:07 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 44ms (Views: 39.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cuts/9" for 126.78.106.33 at 2021-11-10 10:33:22 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCut Load (0.1ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? AND "cuts"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cuts_controller.rb:10
+  Rendering cuts/show.html.erb within layouts/application
+  Rendered cuts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 44ms (Views: 39.6ms | ActiveRecord: 0.2ms)
+
+
