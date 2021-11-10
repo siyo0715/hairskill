@@ -1,14 +1,14 @@
 // Cut.Color.Perm共通
 
 .index {
-    margin-left: 10px;
+    margin: 0 10px;
 }
 .show {
     margin: 0 10px;
 }
 
 .edit {
-    margin-left: 10px;
+    margin: 0 10px;
 }
 
 // CutのSCSS
@@ -24,7 +24,7 @@
     background-color: rgba(0, 0, 0, .5);
 }
 .cut {
-    color: #FF69A3;
+    color: #191970;
 }
 .cut_index {
     color: #FF9900;

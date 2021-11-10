@@ -1,39 +1,40 @@
   <div class="contact_page_zone">
-
-    <% if @contact.errors.any? %>
-      <% @contact.errors.full_messages.each do |message| %>
-        <%= message %>
+    <div class="contact">
+      <% if @contact.errors.any? %>
+        <% @contact.errors.full_messages.each do |message| %>
+          <%= message %>
+        <% end %>
       <% end %>
-    <% end %>
 
-    <%= form_with model: @contact, local: true do |f| %>
-      <div class="form-group">
-        <%= f.label :name, 'お名前', class: 'post_contact' %><br>
-        <%= f.text_field :name, autofocus: true, class: 'post_zone' %>
-      </div>
+      <%= form_with model: @contact, local: true do |f| %>
+        <div class="form-group">
+          <%= f.label :name, 'お名前', class: 'post_contact' %><br>
+          <%= f.text_field :name, autofocus: true, class: 'post_zone' %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :email, 'メールアドレス', class: 'post_contact' %><br>
-        <%= f.email_field :email, autofocus: true, class: 'post_zone' %>
-      </div>
+        <div class="form-group">
+          <%= f.label :email, 'メールアドレス', class: 'post_contact' %><br>
+          <%= f.email_field :email, autofocus: true, class: 'post_zone' %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :phone_number, '電話番号', class: 'post_contact' %><br>
-        <%= f.telephone_field :phone_number, autofocus: true, class: 'post_zone' %>
-      </div>
+        <div class="form-group">
+          <%= f.label :phone_number, '電話番号', class: 'post_contact' %><br>
+          <%= f.telephone_field :phone_number, autofocus: true, class: 'post_zone' %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :subject, 'タイトル', class: 'post_contact' %><br>
-        <%= f.text_field :subject, autofocus: true, class: 'post_zone' %>
-      </div>
+        <div class="form-group">
+          <%= f.label :subject, 'タイトル', class: 'post_contact' %><br>
+          <%= f.text_field :subject, autofocus: true, class: 'post_zone' %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :message, 'お問い合わせ内容', class: 'post_contact' %></br>
-        <%= f.text_area :message, class: 'post_area' %>
-      </div>
+        <div class="form-group">
+          <%= f.label :message, 'お問い合わせ内容', class: 'post_contact' %></br>
+          <%= f.text_area :message, class: 'post_area' %>
+        </div>
 
-      <div>
-        <%= f.submit '送信', class: "contact_btn" %>
-      </div>
-    <% end %>
+        <div>
+          <%= f.submit '送信', class: "contact_btn" %>
+        </div>
+      <% end %>
+    </div>
   </div>

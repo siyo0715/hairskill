@@ -35,12 +35,24 @@
   }
 }
 // ↓エラーメッセージ
-#error_explanation{
+#error_explanation {
   background-color: red;
   color: snow;
 }
 
 // ↓deviseのcss(アカウント類)
-.p_user_zone{
-  background-color: #F0FFF0;
+.p_user_zone {
+  background: rgba(255, 255, 255, .7) image-url('AdobeStock_450946274.jpeg');
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  background-size:cover;
+  background-blend-mode: lighten;
+}
+// deviseのpasswords/newのcss
+.forget {
+  text-align: center;
+}
+.forget_question{
+  margin-bottom: 20px;
 }
