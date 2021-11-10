@@ -1,8 +1,6 @@
- <!----他のページでタイトルと内容にcssを当てているので----->
- <!--(タイトル = taitoru) & (内容 = naiyouとしています。)-->
  <!--------このページはbootstrapを主に使用しています------->
   <div class="calendar">
-  <h1 class="calendar-top">カレンダー</h1>
+  <h1 class="calendar_top">カレンダー</h1>
   <br>
   <h5 class="mt-2">ログイン:<span class="text-info"><%= current_user.last_name %></span>様</h5>
     <div class="row">
@@ -15,12 +13,12 @@
       <% end %>
 
       <%= form_with(model: @blog, local: true) do |form| %>
-        <div class="taitoru">
+        <div class="title">
           <div class="form-tag mt-5">タイトル</div>
           <%= form.text_field :title, placeholder: "1~15文字" %>
         </div>
 
-        <div class="naiyou">
+        <div class="detail">
           <div class="form-tag">内容</div>
           <%= form.text_area :content, size: '30x10', placeholder: "1~200文字" %>
         </div>
@@ -30,7 +28,7 @@
           <%= form.datetime_select :start_time %>
         </div>
         <div class="submit">
-          <p class="text-change">スケジュールを投稿しますか？</p>
+          <p>スケジュールを投稿しますか？</p>
           <%= form.submit "投稿する" %>
         </div>
       <% end %>

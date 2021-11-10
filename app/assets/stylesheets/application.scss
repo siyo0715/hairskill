@@ -27,21 +27,23 @@ body {
   min-height: 100vh;
   background-color: black;
 }
+
 .good {
   background-color: black;
   color: snow;
 }
+
 .header {
   width: 100%;
   display: flex;
   background-color: black;
   border: 5px solid silver;
 }
-.header-logo {
+.header_logo {
   width: 20%;
   font-family: Didot;
   }
-  .title{
+  .theme_title{
     letter-spacing: 3px;
     text-decoration: none;
 

@@ -1,6 +1,7 @@
   <!--このページはbootstrapを主に使用しています-->
-  <div class="skill_page_zone">
-    <%= form_with(model: @perm, local: true) do |form| %>
+  <div class="perm_page_zone">
+    <div class="edit">
+      <%= form_with(model: @perm, local: true) do |form| %>
       <div class="daimei">
         <h3 class="text-success pt-3">タイトル</h3></br>
         <%= form.text_field :title %>
@@ -20,4 +21,5 @@
         <% end %>
         <%= link_to '戻る', colors_path, class: "btn btn-dark m-4" %>
       </div>
+    </div>
   </div>

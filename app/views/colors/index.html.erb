@@ -1,66 +1,65 @@
-  <!--他のページでタイトルと内容にcssを当てているので<br>-->
-  <!-----------------(タイトル = daimei) ------------------>
   <!--このページはbootstrapを主に使用しています-->
-  <div class="skill_page_zone">
-    <h1 class="color">カラー</h1>
-    <br>
-    <div class="row">
-      <div class="col-md-4 text-success">
-
-        <% if @color.errors.any? %>
-          <% @color.errors.full_messages.each do |message| %>
-            <%= message %>
-          <% end %>
-        <% end %>
-
-         <%= form_with(model: @color, local: true) do |form| %>
-          <div class="daimei">
-            <div class="form-tag">タイトル</div>
-            <%= form.text_field :title, placeholder: "1~20文字" %>
-          </div>
-
-          <div class="detail">
-            <div class="form-tag">詳細</div>
-            <%= form.text_area :detail, size: '30x10', placeholder: "1~500文字" %>
-          </div>
-
-          <div>
-            <div class="form-tag">自己評価点数</div>
-            <%= form.number_field :evaluation, placeholder: "数字入力" %>
-          </div>
-        <p>
-          <div class="detail">
-            <div class="form-tag">写真</div>
-            <%= form.attachment_field :color_image %>
-          </div>
-        </p>
-          <div class="submit">
-            <%= form.submit %>
-          </div>
-        <% end %>
-      </div>
-
+  <div class="color_page_zone">
+    <div class="index">
+      <h1 class="color">カラー</h1>
       <br>
+      <div class="row">
+        <div class="col-md-4 text-success">
 
-      <div class="col-md-8">
-        <div class="color_index">カラーテーブル</div>
-          <table class="table">
-            <thead class="thead-dark">
-              <tr>
-                <th>タイトル</th>
-                <th>投稿日時</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @colors.each do |color| %>
+          <% if @color.errors.any? %>
+            <% @color.errors.full_messages.each do |message| %>
+              <%= message %>
+            <% end %>
+          <% end %>
+
+           <%= form_with(model: @color, local: true) do |form| %>
+            <div class="title">
+              <div class="form-tag">タイトル</div>
+              <%= form.text_field :title, placeholder: "1~20文字" %>
+            </div>
+
+            <div class="detail">
+              <div class="form-tag">詳細</div>
+              <%= form.text_area :detail, size: '30x10', placeholder: "1~500文字" %>
+            </div>
+
+            <div>
+              <div class="form-tag">自己評価点数</div>
+              <%= form.number_field :evaluation, placeholder: "数字入力" %>
+            </div>
+          <p>
+            <div class="title">
+              <div class="form-tag">写真</div>
+              <%= form.attachment_field :color_image %>
+            </div>
+          </p>
+            <div class="submit">
+              <%= form.submit %>
+            </div>
+          <% end %>
+        </div>
+        <br>
+
+        <div class="col-md-8">
+          <div class="color_index">カラーテーブル</div>
+            <table class="table">
+              <thead class="thead-dark">
                 <tr>
-                  <td><%= link_to color.title,color_path(color.id) %></td>
-                  <td><%= color.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+                  <th>タイトル</th>
+                  <th>投稿日時</th>
                 </tr>
-              <% end %>
-            </tbody>
-          </table>
-        <div class="ml-5"><%= paginate @colors %></div>
+              </thead>
+              <tbody>
+                <% @colors.each do |color| %>
+                  <tr class="text-warning bg-white">
+                    <td><%= link_to color.title,color_path(color.id) %></td>
+                    <td><%= color.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          <div class="ml-5"><%= paginate @colors %></div>
+        </div>
       </div>
     </div>
   </div>

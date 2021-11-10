@@ -1,0 +1,49 @@
+// Cut.Color.Perm共通
+
+.index {
+    margin-left: 10px;
+}
+.show {
+    margin-left: 10px;
+}
+
+.edit {
+    margin-left: 10px;
+}
+
+// CutのSCSS
+.cut_page_zone {
+  background-image: image-url('shutterstock_178947776.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  background-size:cover;
+}
+.cut {
+    color: #FFCC66;
+}
+.cut_index {
+    color: #EEEEEE;
+}
+
+// ColorのSCSS
+.color_page_zone {
+    background-color: #FFF5EE;
+}
+.color {
+    color: #A52A2A;
+}
+.color_index {
+    color: #EEEEEE;
+}
+
+// PermのSCSS
+.perm_page_zone {
+    background-color: #FFF5EE;
+}
+.perm {
+    color: #006400;
+}
+.perm_index {
+    color: #EEEEEE;
+}
