@@ -8,6 +8,8 @@ class ContactsController < ApplicationController
     if @contact.save
       ContactMailer.send_mail(@contact)
       redirect_to root_path
+    else
+      render 'about'
     end
   end
 

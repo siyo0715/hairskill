@@ -13,22 +13,21 @@
 
 // CutのSCSS
 .cut_page_zone {
-  background: rgba(255, 255, 255, .8) image-url('shutterstock_178947776.jpg');
+  background: rgba(255, 255, 255, .7) image-url('shutterstock_178947776.jpg');
   background-position: top;
   background-repeat: no-repeat;
   min-height: 600px;
   background-size:cover;
-  // background: rgba(255, 255, 255, .9);
   background-blend-mode: lighten;
 }
 .cut-page-text-back {
     background-color: rgba(0, 0, 0, .5);
 }
 .cut {
-    color: #FFCC66;
+    color: #FF9900;
 }
 .cut_index {
-    color: #EEEEEE;
+    color: #FF9900;
 }
 
 .cut-img {
@@ -37,22 +36,40 @@
 
 // ColorのSCSS
 .color_page_zone {
-    background-color: #FFF5EE;
+  background: rgba(255, 255, 255, .4) image-url('AdobeStock_198683617.jpeg');
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  background-size:cover;
+  background-blend-mode: lighten;
 }
+.color-page-text-back {
+    background-color: rgba(0, 0, 0, .5);
+}
+
 .color {
     color: #A52A2A;
 }
 .color_index {
-    color: #EEEEEE;
+    color: #A52A2A;
 }
 
 // PermのSCSS
 .perm_page_zone {
-    background-color: #FFF5EE;
+  background-color: #FFF5EE;
+  background: rgba(255, 255, 255, .6) image-url('shutterstock_1177580824.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  background-size:cover;
+  background-blend-mode: lighten;
+}
+.perm-page-text-back {
+    background-color: rgba(0, 0, 0, .5);
 }
 .perm {
-    color: #006400;
+    color: #008080;
 }
 .perm_index {
-    color: #EEEEEE;
+    color: #008080;
 }

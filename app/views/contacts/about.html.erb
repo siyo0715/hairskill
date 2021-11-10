@@ -1,4 +1,9 @@
   <div class="contact_page_zone">
+    <% if @contact.errors.any? %>
+            <% @contact.errors.full_messages.each do |message| %>
+              <%= message %>
+            <% end %>
+          <% end %>
     <%= form_with model: @contact, local: true do |f| %>
       <div class="form-group">
         <%= f.label :name, 'お名前', class: 'post_contact' %><br>
