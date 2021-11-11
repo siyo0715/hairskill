@@ -46,13 +46,72 @@
   background-position: top;
   background-repeat: no-repeat;
   min-height: 600px;
-  background-size:cover;
+  background-size: cover;
   background-blend-mode: lighten;
 }
 // deviseのpasswords/newのcss
 .forget {
   text-align: center;
 }
-.forget_question{
+.forget_question {
   margin-bottom: 20px;
+}
+
+
+// users/informationのcss
+
+.information_page_zone {
+  background-color: #FFFFCC;
+}
+
+#slider {
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+}
+
+.slide1 {
+　display: none;
+  background-image: image-url('shutterstock_1038740494_4.jpg');
+}
+
+.slide2 {
+  display: none;
+  background-image: image-url('scissor-and-comb.png');
+}
+
+.slide3 {
+  display: none;
+  background-image: image-url('shutterstock_1177580824.jpg');
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  margin-top: 230px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left {
+  border-width: 20px 20px 20px 0;
+  border-color: transparent gray transparent transparent;
+  left: 0;
+  margin-left: 30px;
+}
+
+#arrow-right{
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent gray;
+  right: 0;
+  margin-right: 30px;
 }

@@ -43,13 +43,13 @@ body {
   width: 20%;
   font-family: Didot;
   }
-  .theme_title{
+  .theme_title {
     letter-spacing: 3px;
     text-decoration: none;
-
     padding: 30px;
     color: burlywood;
     margin-bottom: 0;
+
     &:hover {
     text-decoration: underline;
   }
@@ -57,26 +57,27 @@ body {
     color: plum;
   }
 }
-nav{
+nav {
   width: 80%;
   background-color: brown;
   display: flex;
   align-items: center;
 
-  ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  .h-seni {
-    color: snow;
-    font-size: 16px;
-    padding-left: 8px;
-    &:active {
-      color: plum;
+    ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+
+    .h-seni {
+      color: snow;
+      font-size: 16px;
+      padding: 0 8px;
+
+      &:active {
+        color: plum;
+      }
     }
   }
-}
-
 }
 .top-image-box {
   margin-left: 0;
@@ -89,6 +90,8 @@ nav{
   background-color:brown;
   border: 5px solid silver;
 }
+
+// アイフォン・スマホ
 @media (max-width: 600px) and (min-width: 0px) {
   body {
     width: 100%;
@@ -96,14 +99,17 @@ nav{
   .header {
     width: 100%;
   }
-  .content{
+  // .nav {
+  //   display: none;
+  // }
+  .content {
     width: 100%;
   }
-  .top-image-box{
+  .top-image-box {
     width: 100%;
   }
 }
-
+// タブレット
 @media (max-width: 800px) and (min-width: 601px) {
   body {
     width: 100%;
@@ -113,29 +119,62 @@ nav{
     .nav {
       width: 100%;
     }
+    .header_logo {
+      width: 20%;
+      font-family: Didot;
+    }
   }
-  .content{
+  .content {
     width: 100%;
   }
-  .top-image-box{
+  .top-image-box {
     width: 100%;
   }
 }
 
-@media (max-width: 1000px) and (min-width: 801px) {
+@media (max-width: 1173px) and (min-width: 1005px) {
+
   body {
-    width: 80%;
-  }
-  .header {
     width: 100%;
-    .nav {
-      width: 100%;
+  }
+
+  .header {
+    height: 150px;
+    display: block;
+  }
+  .header_logo {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+  }
+  .theme_title {
+    letter-spacing: 10px;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    height: 32px;
+
+      ul {
+      list-style: none;
+      display: flex;
+      margin: 0 auto;
+
+      .h-seni {
+        color: snow;
+        font-size: 27px;
+        padding: 0 6px;
+
+        &:active {
+          color: plum;
+        }
+      }
     }
   }
-  .content{
-    width: 100%;
-  }
-  .top-image-box{
-    width: 100%;
-  }
 }
+
+
+
+
+
+
