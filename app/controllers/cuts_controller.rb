@@ -13,7 +13,7 @@ class CutsController < ApplicationController
   def create
     @cut = current_user.cuts.new(cut_parameter)
     if @cut.save
-      redirect_to cuts_path, notice:"投稿完了"
+      redirect_to cuts_path, notice: "投稿完了"
     else
       @cuts = current_user.cuts.page(params[:page]).per(10).order('updated_at DESC')
       render 'index'
@@ -23,7 +23,7 @@ class CutsController < ApplicationController
   def destroy
     @cut = current_user.cuts.find(params[:id])
     @cut.destroy
-    redirect_to cuts_path, notice:"削除完了"
+    redirect_to cuts_path, notice: "削除完了"
   end
 
   def edit

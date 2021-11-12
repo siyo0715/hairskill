@@ -12,9 +12,9 @@ class ColorsController < ApplicationController
   def create
     @color = current_user.colors.new(color_parameter)
     if @color.save
-      redirect_to colors_path, notice:"投稿完了"
+      redirect_to colors_path, notice: "投稿完了"
     else
-       @colors = current_user.colors.page(params[:page]).per(10).order('updated_at DESC')
+      @colors = current_user.colors.page(params[:page]).per(10).order('updated_at DESC')
       render 'index'
     end
   end
@@ -22,7 +22,7 @@ class ColorsController < ApplicationController
   def destroy
     @color = current_user.colors.find(params[:id])
     @color.destroy
-    redirect_to colors_path, notice:"削除完了"
+    redirect_to colors_path, notice: "削除完了"
   end
 
   def edit

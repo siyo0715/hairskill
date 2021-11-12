@@ -5,5 +5,4 @@ class BlogsControllerTest < ActionDispatch::IntegrationTest
     get blogs_index_url
     assert_response :success
   end
-
 end

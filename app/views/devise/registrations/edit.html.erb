@@ -46,7 +46,13 @@
 
       <p>アカウントを消しますか? <%= button_to "アカウントを削除", registration_path(resource_name), data: { confirm: "本当に削除しますか？?" }, method: :delete %></p>
 
-      <%= link_to "Back", :back %>
+        <%= link_to root_path do %>
+          <span class="back">戻る</span>
+        <% end %>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <span class="logout">ログアウト</span>
+        <% end %>
+
     </div>
   </div>
 <% end %>

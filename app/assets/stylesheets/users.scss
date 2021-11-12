@@ -57,11 +57,24 @@
   margin-bottom: 20px;
 }
 
+// devise/registrations/editのcss
+.back {
+   margin-right: 25px;
+}
+
+.logout{
+  margin-left: 25px;
+}
 
 // users/informationのcss
 
 .information_page_zone {
   background-color: #FFFFCC;
+}
+
+.information_page_zone {
+  text-align: center;
+  color: teal;
 }
 
 #slider {
@@ -90,7 +103,7 @@
 
 .slide3 {
   display: none;
-  background-image: image-url('shutterstock_1177580824.jpg');
+  background-image: image-url('image_72192707.JPG');
 }
 
 .arrow {

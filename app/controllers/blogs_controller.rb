@@ -11,13 +11,13 @@ class BlogsController < ApplicationController
 
   def create
     @blog = current_user.blogs.create(blog_parameter)
-    redirect_to blogs_path, notice:"スケジュールが追加されました"
+    redirect_to blogs_path, notice: "スケジュールが追加されました"
   end
 
   def destroy
     @blog = current_user.blogs.find(params[:id])
     @blog.destroy
-    redirect_to blogs_path, notice:"削除完了"
+    redirect_to blogs_path, notice: "削除完了"
   end
 
   def edit

@@ -10,9 +10,9 @@ class PermsController < ApplicationController
   end
 
   def create
-     @perm = current_user.perms.new(perm_parameter)
+    @perm = current_user.perms.new(perm_parameter)
     if @perm.save
-      redirect_to perms_path, notice:"投稿完了"
+      redirect_to perms_path, notice: "投稿完了"
     else
       @perms = current_user.perms.page(params[:page]).per(10).order('updated_at DESC')
       render 'index'
@@ -22,15 +22,15 @@ class PermsController < ApplicationController
   def destroy
     @perm = current_user.perms.find(params[:id])
     @perm.destroy
-    redirect_to perms_path, notice:"削除完了"
+    redirect_to perms_path, notice: "削除完了"
   end
 
   def edit
-     @perm = current_user.perms.find(params[:id])
+    @perm = current_user.perms.find(params[:id])
   end
 
   def update
-   @perm = current_user.perms.find(params[:id])
+    @perm = current_user.perms.find(params[:id])
     if @perm.update(perm_parameter)
       redirect_to perms_path, notice: "編集完了"
     else

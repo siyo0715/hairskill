@@ -15,5 +15,4 @@ class PermControllerTest < ActionDispatch::IntegrationTest
     get perm_edit_url
     assert_response :success
   end
-
 end

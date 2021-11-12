@@ -15,5 +15,4 @@ class CutControllerTest < ActionDispatch::IntegrationTest
     get cut_edit_url
     assert_response :success
   end
-
 end

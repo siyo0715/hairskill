@@ -6,16 +6,11 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      ContactMailer.send_mail(@contact)
+      ContactMailer.send_mail(@contact).deliver_now
       redirect_to root_path
     else
       render 'about'
     end
-  end
-
-  def back
-    @contact = Contact.new(contact_params)
-    render 'contact_about'
   end
 
   private

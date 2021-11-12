@@ -58,7 +58,7 @@ body {
   }
 }
 nav {
-  width: 80%;
+  width: 100%;
   background-color: brown;
   display: flex;
   align-items: center;
@@ -91,48 +91,7 @@ nav {
   border: 5px solid silver;
 }
 
-// アイフォン・スマホ
-@media (max-width: 600px) and (min-width: 0px) {
-  body {
-    width: 100%;
-  }
-  .header {
-    width: 100%;
-  }
-  // .nav {
-  //   display: none;
-  // }
-  .content {
-    width: 100%;
-  }
-  .top-image-box {
-    width: 100%;
-  }
-}
-// タブレット
-@media (max-width: 800px) and (min-width: 601px) {
-  body {
-    width: 100%;
-  }
-  .header {
-    width: 100%;
-    .nav {
-      width: 100%;
-    }
-    .header_logo {
-      width: 20%;
-      font-family: Didot;
-    }
-  }
-  .content {
-    width: 100%;
-  }
-  .top-image-box {
-    width: 100%;
-  }
-}
-
-@media (max-width: 1173px) and (min-width: 1005px) {
+@media (max-width: 1111px) and (min-width: 733px) {
 
   body {
     width: 100%;
@@ -149,6 +108,7 @@ nav {
   }
   .theme_title {
     letter-spacing: 10px;
+
   }
   nav {
     width: 100%;
@@ -162,19 +122,17 @@ nav {
 
       .h-seni {
         color: snow;
-        font-size: 27px;
-        padding: 0 6px;
+        font-size: 18px;
+        padding: 0 10px;
 
-        &:active {
-          color: plum;
-        }
       }
     }
   }
+  // homes/topのcss
+  .content {
+  background-repeat: no-repeat;
+  min-height: 1100px;
+  background-size:cover;
+  background-position: center;
 }
-
-
-
-
-
-
+}
