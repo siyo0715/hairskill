@@ -135,4 +135,37 @@ nav {
   background-size:cover;
   background-position: center;
 }
+
+// users/informationのcss
+
+.information_page_zone {
+  background-color: #FFFFCC;
+}
+
+.information_page_zone {
+  text-align: center;
+  color: teal;
+}
+
+#slider {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+}
+
+#arrow-left {
+  margin-left: 0px;
+}
+
+#arrow-right{
+  margin-right: 0px;
+}
 }
