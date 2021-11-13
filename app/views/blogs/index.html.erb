@@ -12,26 +12,28 @@
         <% end %>
       <% end %>
 
-      <%= form_with(model: @blog, local: true) do |form| %>
-        <div class="title">
-          <div class="form-tag mt-5">タイトル</div>
-          <%= form.text_field :title, placeholder: "1~15文字" %>
-        </div>
+      <div class="touko">
+        <%= form_with(model: @blog, local: true) do |form| %>
+          <div class="title">
+            <div class="form-tag mt-5">タイトル</div>
+            <%= form.text_field :title, placeholder: "1~15文字", class: "form-control" %>
+          </div>
 
-        <div class="detail">
-          <div class="form-tag">内容</div>
-          <%= form.text_area :content, size: '30x10', placeholder: "1~200文字" %>
-        </div>
+          <div class="detail">
+            <div class="form-tag">内容</div>
+            <%= form.text_area :content, size: '30x10', placeholder: "1~200文字", class: "form-control" %>
+          </div>
 
-        <div class="time">
-          <div class="form-tag">時間</div>
-          <%= form.datetime_select :start_time %>
+          <div class="time">
+            <div class="form-tag">時間</div>
+            <%= form.datetime_select :start_time %>
+          </div>
+          <div class="submit">
+            <p>スケジュールを投稿しますか？</p>
+            <%= form.submit "投稿する" %>
+          </div>
+        <% end %>
         </div>
-        <div class="submit">
-          <p>スケジュールを投稿しますか？</p>
-          <%= form.submit "投稿する" %>
-        </div>
-      <% end %>
       </div>
 
       <br>

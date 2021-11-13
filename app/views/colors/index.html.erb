@@ -12,31 +12,33 @@
             <% end %>
           <% end %>
 
-           <%= form_with(model: @color, local: true) do |form| %>
-            <div class="title">
-              <div class="form-tag">タイトル</div>
-              <%= form.text_field :title, placeholder: "1~20文字" %>
-            </div>
+          <div class="touko">
+            <%= form_with(model: @color, local: true) do |form| %>
+              <div class="title">
+                <div class="form-tag">タイトル</div>
+                <%= form.text_field :title, placeholder: "1~20文字", class: "form-control" %>
+              </div>
 
-            <div class="detail">
-              <div class="form-tag">詳細</div>
-              <%= form.text_area :detail, size: '30x10', placeholder: "1~500文字" %>
-            </div>
+              <div class="detail">
+                <div class="form-tag">詳細</div>
+                <%= form.text_area :detail, size: '30x10', placeholder: "1~500文字", class: "form-control color_form" %>
+              </div>
 
-            <div>
-              <div class="form-tag">自己評価点数</div>
-              <%= form.number_field :evaluation, placeholder: "数字入力" %>
-            </div>
-          <p>
-            <div class="title">
-              <div class="form-tag">写真</div>
-              <%= form.attachment_field :color_image %>
-            </div>
-          </p>
-            <div class="submit">
-              <%= form.submit %>
-            </div>
-          <% end %>
+              <div>
+                <div class="form-tag">自己評価点数</div>
+                <%= form.number_field :evaluation, placeholder: "数字入力", class: "color_form" %>
+              </div>
+            <p>
+              <div class="title">
+                <div class="form-tag">写真</div>
+                <%= form.attachment_field :color_image %>
+              </div>
+            </p>
+              <div class="submit">
+                <%= form.submit %>
+              </div>
+            <% end %>
+          </div>
         </div>
         <br>
 

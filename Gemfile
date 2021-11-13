@@ -76,3 +76,4 @@ gem "refile-mini_magick"
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.1'
 gem 'dotenv-rails'
+gem 'font-awesome-sass'
