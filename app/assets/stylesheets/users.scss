@@ -4,6 +4,7 @@
 
 .midashi_n {
   color: #0bd;
+  text-align: center;
 }
 .post_profile {
   background-color: #734E30;
@@ -122,9 +123,42 @@
   margin-left: 300px;
 }
 
-#arrow-right{
+#arrow-right {
   border-width: 20px 0 20px 20px;
   border-color: transparent transparent transparent gray;
   right: 0;
   margin-right: 300px;
+}
+
+// users/skillのcss
+.skill_navigation_page {
+  width: 100%;
+  text-align: center;
+  line-height: 200px;
+  font-family: serif;
+  font-size: 130px;
+}
+
+.skill_navigation_cut {
+  background-color: navy;
+  height: 200px;
+}
+
+.skill_navigation_color {
+  background-color: #ff0099;
+  height: 200px;
+}
+.skill_navigation_perm {
+  background-color: teal;
+  height: 200px;
+  aline-items: center;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+  margin: auto;
+
+  .skill_seni {
+    color: white;
+  }
 }

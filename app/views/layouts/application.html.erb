@@ -42,18 +42,18 @@
                 <% end %>
               </li>
               <li class="">
-                <%= link_to contact_about_path, class:"h-seni" do %>
-                  <span>お問い合わせ</span>
-                <% end %>
-              </li>
-              <li class="">
                 <%= link_to blogs_path, class:"h-seni" do %>
                   <span>カレンダー</span>
                 <% end %>
               </li>
               <li class="">
+                <%= link_to contact_about_path, class:"h-seni" do %>
+                  <span>連絡</span>
+                <% end %>
+              </li>
+              <li class="">
                 <%= link_to edit_user_registration_path, class:"h-seni" do %>
-                  <span>アカウント</span>
+                  <span>変更</span>
                 <% end %>
               </li>
               <li class="">
@@ -70,7 +70,7 @@
               </li>
               <li class="">
                 <%= link_to new_user_session_path, class:"h-seni" do %>
-                  <span>ログイン</span>
+                  <span>参加</span>
                 <% end %>
               </li>
               <li class="">
@@ -80,7 +80,7 @@
               </li>
               <li class="">
                 <%= link_to contact_about_path, class:"h-seni" do %>
-                  <span>お問い合わせ</span>
+                  <span>連絡</span>
                 <% end %>
               </li>
               <% end %>
@@ -96,68 +96,70 @@
     <div class=footer>
       <nav class="footer_nav">
           <ul>
+            <!--スマホの時ナビをfooterに表示-->
             <!--↓もしログインしていたら-->
             <% if user_signed_in? %>
+
               <li class="">
-                <%= link_to cuts_path, class:"h-seni" do %>
-                  <span>カット</span>
+                <%= link_to skill_path, class:"f-seni" do %>
+                  <span class="fas fa-seedling" style="display: block;"></span>
+                  <span class="hurigana">技術</span>
                 <% end %>
               </li>
               <li class="">
-                <%= link_to colors_path, class:"h-seni" do %>
-                  <span>カラー</span>
+                <%= link_to information_path, class:"f-seni" do %>
+                  <span class="fas fa-info-circle" style="display: block;"></span>
+                  <span class="hurigana">情報</span>
                 <% end %>
               </li>
               <li class="">
-                <%= link_to perms_path, class:"h-seni" do %>
-                  <span>パーマ</span>
+                <%= link_to blogs_path, class:"f-seni" do %>
+                  <span class="fas fa-calendar-alt" style="display: block;"></span>
+                  <span class="hurigana">日程</span>
                 <% end %>
               </li>
               <li class="">
-                <%= link_to information_path, class:"h-seni" do %>
-                  <span>情報</span>
+                <%= link_to contact_about_path, class:"f-seni" do %>
+                  <span class="far fa-envelope" style="display: block;"></span>
+                  <span class="hurigana">連絡</span>
                 <% end %>
               </li>
               <li class="">
-                <%= link_to contact_about_path, class:"h-seni" do %>
-                  <span>お問い合わせ</span>
+                <%= link_to edit_user_registration_path, class:"f-seni" do %>
+                  <span class="fas fa-user-cog" style="display: block;"></span>
+                  <span class="hurigana">変更</span>
                 <% end %>
               </li>
               <li class="">
-                <%= link_to blogs_path, class:"h-seni" do %>
-                  <span>カレンダー</span>
-                <% end %>
-              </li>
-              <li class="">
-                <%= link_to edit_user_registration_path, class:"h-seni" do %>
-                  <span>アカウント</span>
-                <% end %>
-              </li>
-              <li class="">
-                <%= link_to destroy_user_session_path, method: :delete, class:"h-seni" do %>
-                  <span>退出</span>
+                <%= link_to destroy_user_session_path, method: :delete, class:"f-seni" do %>
+                  <span class="fas fa-sign-out-alt" style="display: block;"></span>
+                  <span class="hurigana">退出</span>
                 <% end %>
               </li>
             <!--↓もしログインしていなかったら-->
             <% else %>
               <li class="">
-                <%= link_to new_user_registration_path, class:"h-seni" do %>
-                  <span>新規登録</span>
+                <%= link_to new_user_registration_path, class:"f-seni" do %>
+                  <span class="fas fa-user-shield" style="display: block;"></span>
+                  <span class="hurigana">新規</span>
                 <% end %>
               </li>
               <li class="">
-                <%= link_to new_user_session_path, class:"h-seni" do %>
-                  <span>ログイン</span>
+                <%= link_to new_user_session_path, class:"f-seni" do %>
+                  <span class="fas fa-sign-in-alt" style="display: block;"></span>
+                  <span class="hurigana">参加</span>
                 <% end %>
               </li>
               <li class="">
-                <%= link_to new_user_password_path, class:"h-seni" do %>
-                  <span>パスワードをお忘れですか？</span>
+                <%= link_to new_user_password_path, class:"f-seni" do %>
+                  <span class="fas fa-user-edit" style="display: block;"></span>
+                  <span class="hurigana">変更</span>
                 <% end %>
               </li>
               <li class="">
-                <%= link_to contact_about_path, class:"h-seni" do %>
-                  <span>お問い合わせ</span>
+                <%= link_to contact_about_path, class:"f-seni" do %>
+                  <span class="far fa-envelope" style="display: block;"></span>
+                  <span class="hurigana">連絡</span>
                 <% end %>
               </li>
               <% end %>

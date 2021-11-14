@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'homes#top'
   # ↓ナビゲーションページ
   get 'users/information' => "users#information", as: "information"
+  get 'users/skill' => "users#skill", as: "skill"
   # ↓カット・カラー・パーマ
   resources :cuts, only: [:index, :show, :edit, :create, :update, :destroy]
   resources :colors, only: [:index, :show, :edit, :create, :update, :destroy]

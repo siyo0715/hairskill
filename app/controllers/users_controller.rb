@@ -6,6 +6,10 @@ class UsersController < ApplicationController
   end
 end
 
+def skill
+  
+end
+
 private
 
 def user_params
