@@ -69,7 +69,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'kaminari'
 gem 'byebug'
-gem 'rails-i18n'
+gem 'rails-i18n', '~> 5.1'
 gem 'simple_calendar', '~> 2.0'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"

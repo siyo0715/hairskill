@@ -1,0 +1,22 @@
+ja:
+  flash:
+    new: 作成しました！
+    updated: 更新しました！
+    failed: 失敗しました！
+    destroy: 削除しました！
+    login: ログインしました！
+    logout: ログアウトしました！
+    limited_access: 不正な侵入です
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+        user:
+          id: ID
+          first_name: 名前
+          last_name: 苗字
+          email: メールアドレス
+          password: パスワード
+          phone_number: 電話番号
+          password_confirmation: 再入力のパスワード
+

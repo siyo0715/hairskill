@@ -8,7 +8,7 @@
         <%= render "devise/shared/error_messages", resource: resource %>
 
         <div class="field">
-          <%= f.label :new_email %><br />
+          <%= f.label :new_email %> <i>(変更したくない場合は同じアドレスを入力してください)</i><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
         </div>
 
