@@ -10,8 +10,12 @@ class BlogsController < ApplicationController
   end
 
   def create
-    @blog = current_user.blogs.create(blog_parameter)
-    redirect_to blogs_path, notice: "スケジュールが追加されました"
+    if  @blog = current_user.blogs.create(blog_parameter)
+      redirect_to blogs_path
+    else
+      @blog = current_user.blogs.find(params[:id])
+      render 'index'
+    end
   end
 
   def destroy
