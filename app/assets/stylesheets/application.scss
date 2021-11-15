@@ -124,7 +124,6 @@ body {
   }
   .theme_title {
     letter-spacing: 10px;
-
   }
   .header_nav {
     width: 100%;
@@ -216,9 +215,8 @@ body {
 
     }
     .header_nav {
-      width: 100%;
       display: none;
-      height: 32px;
+      padding: 18px;
     }
 
   // footerのcss
@@ -367,7 +365,7 @@ body {
     }
     .theme_title {
       letter-spacing: 10px;
-
+      padding: 0;
     }
     .header_nav {
       width: 100%;
