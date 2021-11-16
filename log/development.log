@@ -52066,3 +52066,106 @@ Processing by HomesController#top as HTML
 Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 126.78.106.33 at 2021-11-16 13:08:59 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 4998ms (Views: 4992.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/skill" for 126.78.106.33 at 2021-11-16 13:09:14 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#skill as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering users/skill.html.erb within layouts/application
+  Rendered users/skill.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cuts" for 126.78.106.33 at 2021-11-16 13:09:17 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering cuts/index.html.erb within layouts/application
+  [1m[36mCut Load (0.2ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? ORDER BY updated_at DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/cuts/index.html.erb:55
+  Rendered cuts/index.html.erb within layouts/application (201.5ms)
+Completed 200 OK in 276ms (Views: 242.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/cuts" for 126.78.106.33 at 2021-11-16 13:09:23 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jy4A0UAT0l3u6hZ0YBhU8difD6VGNl79MWuUENFtUYqL5ctia1UW6B7m14FH7/9x0JjpIvhdp7offzawLNNPGA==", "cut"=>{"title"=>"", "detail"=>"", "evaluation"=>"", "cut_image"=>"{}"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cuts_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/cuts_controller.rb:15
+  Rendering cuts/index.html.erb within layouts/application
+  [1m[36mCut Load (0.2ms)[0m  [1m[34mSELECT  "cuts".* FROM "cuts" WHERE "cuts"."user_id" = ? ORDER BY updated_at DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/cuts/index.html.erb:55
+  Rendered cuts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 64ms (Views: 54.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 126.78.106.33 at 2021-11-16 13:10:01 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/information" for 126.78.106.33 at 2021-11-16 13:10:11 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#information as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering users/information.html.erb within layouts/application
+  Rendered users/information.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 126.78.106.33 at 2021-11-16 13:10:15 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 60ms (Views: 59.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/skill" for 126.78.106.33 at 2021-11-16 13:10:19 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#skill as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering users/skill.html.erb within layouts/application
+  Rendered users/skill.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 55ms (Views: 52.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/perms" for 126.78.106.33 at 2021-11-16 13:10:23 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PermsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering perms/index.html.erb within layouts/application
+  [1m[36mPerm Load (0.2ms)[0m  [1m[34mSELECT  "perms".* FROM "perms" WHERE "perms"."user_id" = ? ORDER BY updated_at DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/perms/index.html.erb:57
+  Rendered perms/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 82ms (Views: 66.1ms | ActiveRecord: 0.9ms)
+
+
