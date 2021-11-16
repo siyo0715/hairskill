@@ -1,4 +1,15 @@
 ja:
+  devise:
+    sessions:
+      user:
+        signed_out: ログアウトしました!
+        signed_in: ログインしました!
+    passwords:
+      user:
+        send_instructions: メールをご確認してください
+  errors:
+    messages:
+      not_saved: メッセージの送信に失敗しました！
   flash:
     new: 作成しました！
     updated: 更新しました！
@@ -10,13 +21,40 @@ ja:
   activerecord:
     models:
       user: ユーザー
+      contact: お問い合わせ
+      cut:
+      color:
+      perm:
     attributes:
-        user:
-          id: ID
-          first_name: 名前
-          last_name: 苗字
-          email: メールアドレス
-          password: パスワード
-          phone_number: 電話番号
-          password_confirmation: 再入力のパスワード
+      user:
+        id: ID
+        first_name: 名前
+        last_name: 苗字
+        email: メールアドレス
+        password: パスワード
+        phone_number: 電話番号
+        password_confirmation: 再入力のパスワード
+        current_password: 現在のパスワード
+      contact:
+        name: 名前
+        email: メールアドレス
+        phone_number: 電話番号
+        subject: タイトル
+        message: メッセージ
+      cut:
+        title: タイトル
+        detail: 詳細
+        evaluation: 自己評価点数
+        cut_image: 写真
+      color:
+        title: タイトル
+        detail: 詳細
+        evaluation: 自己評価点数
+        color_image: 写真
+      perm:
+        title: タイトル
+        detail: 詳細
+        evaluation: 自己評価点数
+        perm_image: 写真
+
 

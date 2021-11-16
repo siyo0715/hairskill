@@ -22,18 +22,8 @@
             <!--↓もしログインしていたら-->
             <% if user_signed_in? %>
               <li class="">
-                <%= link_to cuts_path, class:"h-seni" do %>
-                  <span>カット</span>
-                <% end %>
-              </li>
-              <li class="">
-                <%= link_to colors_path, class:"h-seni" do %>
-                  <span>カラー</span>
-                <% end %>
-              </li>
-              <li class="">
-                <%= link_to perms_path, class:"h-seni" do %>
-                  <span>パーマ</span>
+                <%= link_to skill_path, class:"h-seni" do %>
+                  <span>技術</span>
                 <% end %>
               </li>
               <li class="">

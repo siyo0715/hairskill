@@ -1,19 +1,19 @@
   <div class="skill_navigation_page">
-    <ul>
-      <li class="skill_navigation_cut">
-        <%= link_to cuts_path, class:"skill_seni" do %>
+    <ul class="skill_navigation_zone">
+      <%= link_to cuts_path, class:"skill_seni" do %>
+        <li class="skill_navigation_cut">
           <span>Cut</span>
-        <% end %>
-      </li>
-      <li class="skill_navigation_color">
-        <%= link_to colors_path, class:"skill_seni" do %>
+        </li>
+      <% end %>
+      <%= link_to colors_path, class:"skill_seni" do %>
+        <li class="skill_navigation_color">
           <span>Color</span>
-        <% end %>
-      </li>
-      <li class="skill_navigation_perm">
-        <%= link_to perms_path, class:"skill_seni" do %>
+        </li>
+      <% end %>
+      <%= link_to perms_path, class:"skill_seni" do %>
+        <li class="skill_navigation_perm">
           <span>Perm</span>
-        <% end %>
-      </li>
+        </li>
+      <% end %>
     </ul>
   </div>

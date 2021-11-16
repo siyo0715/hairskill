@@ -59,6 +59,7 @@ body {
     margin-bottom: 0;
 
     &:hover {
+    color: gray;
     text-decoration: underline;
   }
     &:active {
@@ -80,7 +81,11 @@ body {
     .h-seni {
       color: snow;
       font-size: 16px;
-      padding: 0 8px;
+      padding: 0 20px;
+
+      &:hover {
+        background-color: orange;
+      }
 
       &:active {
         color: plum;
@@ -315,7 +320,7 @@ body {
 
   // color/indexのcss
   .color_page_zone {
-    background: rgba(255, 255, 255, .1) image-url('AdobeStock_198683617.jpeg');
+    background: rgba(255, 255, 255, .2) image-url('AdobeStock_198683617.jpeg');
     @include skill_index;
   }
   .color_form {
@@ -324,16 +329,16 @@ body {
 
   // perm/indexのcss
   .perm_page_zone {
-    background: rgba(255, 255, 255, .1) image-url('shutterstock_1177580824.jpg');
+    background: rgba(255, 255, 255, .2) image-url('shutterstock_1177580824.jpg');
     @include skill_index;
   }
   .perm_form {
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(255,255,255,.2);
   }
 
   // cuts/indexのcss
   .cut_page_zone {
-    background: rgba(255, 255, 255, .1) image-url('shutterstock_178947776.jpg');
+    background: rgba(255, 255, 255, .2) image-url('shutterstock_178947776.jpg');
     @include skill_index;
   }
   .cut_form {
@@ -482,7 +487,7 @@ body {
 
   // color/indexのcss
   .color_page_zone {
-    background: rgba(255, 255, 255, .1) image-url('AdobeStock_198683617.jpeg');
+    background: rgba(255, 255, 255, .2) image-url('AdobeStock_198683617.jpeg');
     @include skill_index;
   }
   .color_form {
@@ -491,7 +496,7 @@ body {
 
   // perm/indexのcss
   .perm_page_zone {
-    background: rgba(255, 255, 255, .1) image-url('shutterstock_1177580824.jpg');
+    background: rgba(255, 255, 255, .2) image-url('shutterstock_1177580824.jpg');
     @include skill_index;
   }
   .perm_form {
@@ -500,7 +505,7 @@ body {
 
   // cuts/indexのcss
   .cut_page_zone {
-    background: rgba(255, 255, 255, .1) image-url('shutterstock_178947776.jpg');
+    background: rgba(255, 255, 255, .2) image-url('shutterstock_178947776.jpg');
     @include skill_index;
   }
   .cut_form {
