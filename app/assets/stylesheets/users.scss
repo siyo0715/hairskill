@@ -60,13 +60,18 @@
     }
   }
 }
+// -----------------
 // ↓エラーメッセージ
+// -----------------
 #error_explanation {
   background-color: red;
   color: snow;
 }
 
+// --------------------------
 // ↓deviseのcss(アカウント類)
+// --------------------------
+
 .p_user_zone {
   background: rgba(255, 255, 255, .7) image-url('AdobeStock_450946274.jpeg');
   background-position: top;
@@ -75,7 +80,10 @@
   background-size: cover;
   background-blend-mode: lighten;
 }
+
+// --------------------------
 // deviseのpasswords/newのcss
+// --------------------------
 .forget {
   text-align: center;
 }
@@ -83,7 +91,10 @@
   margin-bottom: 20px;
 }
 
+// ------------------------------
 // devise/registrations/editのcss
+// ------------------------------
+
 .back {
    margin-right: 25px;
 }
@@ -92,7 +103,9 @@
   margin-left: 25px;
 }
 
+// ----------------------
 // users/informationのcss
+// ----------------------
 
 .information_page_zone {
   background-color: #FFFFCC;
@@ -102,7 +115,9 @@
   text-align: center;
   color: teal;
 }
-
+// -------------------
+// 画像スライダーのcss
+// -------------------
 #slider {
   margin: 0 auto;
   padding: 0;
@@ -124,7 +139,7 @@
 
 .slide2 {
   display: none;
-  background-image: image-url('image_6487327.JPG');
+  background-image: image-url('F2A7665F-EF1B-44B4-9011-16FA46A215C1.jpg');
 }
 
 .slide3 {
@@ -154,9 +169,13 @@
   right: 0;
   margin-right: 300px;
 }
-// おみくじ
+
+// -----------------
+// おみくじのcss
+// -----------------
+
 .blink {
-  margin: 15px auto 10px auto;
+  margin: 15px auto 0 auto;
   background-color: #CC66CC;
   color: #FFFFEE;
   -webkit-animation: 1s ease-in-out infinite alternate;
@@ -169,11 +188,12 @@
 }
 
 #omikuji_btn {
+  width: 60%;
+  margin: 15px 0 15px 0;
+  text-align: center;
+  height: 100px;
   background-color: #FF6928;
   color: snow;
-  padding: 20px;
-  margin-top: 5px;
-  margin-bottom: 10px;
   transition: all 0.5s;
 
   &:hover {
@@ -181,7 +201,10 @@
   }
 }
 
+//-----------------
 // users/skillのcss
+// ----------------
+
 .skill_navigation_page {
   width: 100%;
   text-align: center;
@@ -244,7 +267,6 @@
 .skill_navigation_perm {
   background-color: teal;
   height: 200px;
-  aline-items: center;
 }
 .skill_navigation_zone {
   padding-left: 0;

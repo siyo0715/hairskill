@@ -18,6 +18,7 @@
 @import "font-awesome";
 @import "font-awesome-sprockets";
 
+
 @mixin skill_index {
     background-position: top;
     background-repeat: no-repeat;
@@ -77,7 +78,9 @@ body {
     list-style: none;
     display: flex;
     margin: auto;
-
+    // -----------------------------------
+    // h-seni = headerから遷移ということ
+    // -----------------------------------
     .h-seni {
       color: snow;
       font-size: 16px;
@@ -93,11 +96,9 @@ body {
     }
   }
 }
-.top-image-box {
-  margin-left: 0;
-  margin-right: 0;
-  max-width: 100%
-}
+  // ------------
+  // footerのcss
+  // ------------
 .footer{
     height: 150px;
     width: 100%;
@@ -109,10 +110,23 @@ body {
 
 .footer_nav {
     display: none;
-  }
+}
 
+// ---------------------------------------
+// homes/topのcss
+// ---------------------------------------
+.top-image-box {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%
+}
+// ------------------------------------------------
+// ここから下はレスポンシブのcssになっております。
+// ------------------------------------------------
 @media (max-width: 1100px) and (min-width: 1001px) {
+  // -----------------------
   // users/informationのcss
+  // -----------------------
   .slide {
     background-size: cover;
     background-position: center;
@@ -133,7 +147,7 @@ body {
 
 }
 
-// PCサイズからタブレットまでの間
+
 @media (max-width: 1000px) and (min-width: 700px) {
 
   body {
@@ -174,7 +188,9 @@ body {
   .footer_nav {
     display: none;
   }
+  // ---------------
   // homes/topのcss
+  // ---------------
   .content {
   background-repeat: no-repeat;
   min-height: 1100px;
@@ -182,7 +198,9 @@ body {
   background-position: center;
   }
 
+// -----------------------
 // users/informationのcss
+// -----------------------
 
   .information_page_zone {
     background-color: #FFFFCC;
@@ -214,14 +232,15 @@ body {
   #arrow-right {
     margin-right: 0px;
   }
-
-  //Cuts・Colors・Perms・Blogsのindexファイルのcss
-
+  // -----------------------------------------------
+  // cuts・colors・perms・blogsのindexファイルのcss
+  // -----------------------------------------------
   .touko {
     margin: auto;
   }
 }
-// タブレットからスマホまでの間
+
+
 @media (max-width: 699px) and (min-width: 340px) {
 
     body {
@@ -244,9 +263,9 @@ body {
     .header_nav {
       display: none;
     }
-
+  // ------------
   // footerのcss
-
+  // ------------
   .footer{
     height: 80px;
     width: 100%;
@@ -271,6 +290,10 @@ body {
       margin-left: 30px;
     }
 
+    // -----------------------------------
+    // f-seni = footerから遷移ということ
+    // -----------------------------------
+
       .f-seni {
           display: flex;
           flex-direction: column;
@@ -286,7 +309,9 @@ body {
       }
     }
   }
+    // -----------------
     // homes/topのcss
+    // -----------------
     .content {
     background-repeat: no-repeat;
     background-size: cover;
@@ -297,7 +322,9 @@ body {
     .theme{
       font-size: 40px;
     }
+  // -----------------
   // users/skillのcss
+  // -----------------
   #timer {
     color: orange;
     font-size: 70%;
@@ -307,8 +334,10 @@ body {
     font-size: 52px;
     display: inline-flex;
   }
-  // users/informationのcss
 
+  // ----------------------
+  // users/informationのcss
+  // ----------------------
   .information_page_zone {
     background-color: #FFFFCC;
   }
@@ -337,16 +366,19 @@ body {
   #arrow-right{
     margin-right: 30px;
   }
-
+  // ----------------------
   // usersのフォーム類のcss
+  // ----------------------
   .post_profile {
 
   .post_zone {
     width: 200px;
   }
 }
-
+  // ----------------
   // color/indexのcss
+  // ----------------
+
   .color_page_zone {
     background: rgba(255, 255, 255, .3) image-url('AdobeStock_198683617.jpeg');
     @include skill_index;
@@ -354,8 +386,9 @@ body {
   .color_form {
     background-color: rgba(255,255,255,.5);
   }
-
+  // ---------------
   // perm/indexのcss
+  // ---------------
   .perm_page_zone {
     background: rgba(255, 255, 255, .3) image-url('shutterstock_1177580824.jpg');
     @include skill_index;
@@ -363,8 +396,9 @@ body {
   .perm_form {
     background-color: rgba(255,255,255,.5);
   }
-
+  // ---------------
   // cuts/indexのcss
+  // ---------------
   .cut_page_zone {
     background: rgba(255, 255, 255, .3) image-url('shutterstock_178947776.jpg');
     @include skill_index;
@@ -372,8 +406,9 @@ body {
   .cut_form {
     background-color: rgba(255,255,255,.5);
   }
-
+  // --------------
   // homes/topのcss
+  // --------------
   .content {
     background-repeat: no-repeat;
     min-height: 100px;
@@ -460,19 +495,25 @@ body {
       }
     }
   }
+
+    // --------------
     // homes/topのcss
-    .content {
+    // --------------
+
+  .content {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 100px;
-    }
+  }
 
     .theme{
       font-size: 40px;
     }
 
+  // ----------------------
   // users/informationのcss
+  // ----------------------
 
   .information_page_zone {
     background-color: #FFFFCC;
@@ -505,14 +546,21 @@ body {
     margin-right: 0px;
   }
 
+  // ----------------------
   // usersのフォーム類のcss
+  // ----------------------
+
   .post_profile {
 
   .post_zone {
     width: 125px;
   }
 }
+
+// ----------------
 // users/skillのcss
+// ----------------
+
 #timer {
     color: orange;
     font-size: 50%;
@@ -521,7 +569,11 @@ body {
     display: flex;
     font-size: 43px;
   }
+
+// ---------------------
 //users/informationのcss
+// ---------------------
+
 .slide {
     background-size: cover;
     background-position: center;
@@ -531,7 +583,11 @@ body {
   .arrow {
     margin-top: 100px;
 }
+
+  // ----------------
   // color/indexのcss
+  // ----------------
+
   .color_page_zone {
     background: rgba(255, 255, 255, .2) image-url('AdobeStock_198683617.jpeg');
     @include skill_index;
@@ -540,7 +596,10 @@ body {
     background-color: rgba(255,255,255,.5);
   }
 
+  // ---------------
   // perm/indexのcss
+  // ---------------
+
   .perm_page_zone {
     background: rgba(255, 255, 255, .2) image-url('shutterstock_1177580824.jpg');
     @include skill_index;
@@ -549,20 +608,15 @@ body {
     background-color: rgba(255,255,255,.5);
   }
 
+  // ---------------
   // cuts/indexのcss
+  // ---------------
+
   .cut_page_zone {
     background: rgba(255, 255, 255, .2) image-url('shutterstock_178947776.jpg');
     @include skill_index;
   }
   .cut_form {
     background-color: rgba(255,255,255,.5);
-  }
-
-  // homes/topのcss
-  .content {
-    background-repeat: no-repeat;
-    min-height: 100px;
-    background-size: cover;
-    background-position: center;
   }
 }
