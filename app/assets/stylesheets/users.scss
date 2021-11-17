@@ -2,6 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+//---------------------------------
+// グラデーションカラー用のmixin↓
+// --------------------------------
+@mixin g-c($color1,$color2) {
+  background: linear-gradient($color1, $color2);
+}
+// ---------------------------------
+// hover用のmixin↓
+// ---------------------------------
+@mixin skill_time {
+    color: white;
+    background-color: yellow;
+}
+// ---------------------------------
+// active用のmixin↓
+// ---------------------------------
+@mixin skill_time_on {
+    color: white;
+    background-color: red;
+}
+
+
+
 .midashi_n {
   color: #0bd;
   text-align: center;
@@ -30,6 +54,7 @@
     color: whitesmoke;
     background-color: blue;
     box-shadow: 0 0 20px black;
+
     &::before{
       transform: none;
     }
@@ -129,6 +154,31 @@
   right: 0;
   margin-right: 300px;
 }
+// おみくじ
+.blink {
+  background-color: #CC66CC;
+  color: #FFFFEE;
+  -webkit-animation: 1s ease-in-out infinite alternate;
+  animation: blink 3s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes blink {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+#omikuji_btn {
+  background-color: #FF6928;
+  color: snow;
+  padding: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  transition: all 0.5s;
+
+  &:hover {
+    @include g-c( navy,gray);
+  }
+}
 
 // users/skillのcss
 .skill_navigation_page {
@@ -137,6 +187,48 @@
   line-height: 200px;
   font-family: serif;
   font-size: 100px;
+}
+#timer {
+  color: orange;
+}
+#time_control {
+  margin-bottom: 15px;
+}
+.timer-moji {
+  margin-top: 3px;
+  color: snow;
+}
+#start {
+  transition: all 0.5s;
+
+  &:hover {
+    @include skill_time;
+  }
+
+  &:active {
+    @include skill_time_on;
+  }
+}
+#stop {
+
+  &:hover {
+    @include skill_time;
+  }
+
+  &:active {
+    @include skill_time_on;
+  }
+}
+
+#reset {
+
+  &:hover {
+    @include skill_time;
+  }
+
+  &:active {
+    @include skill_time_on;
+  }
 }
 
 .skill_navigation_cut {
