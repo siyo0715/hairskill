@@ -14,7 +14,7 @@
 // ---------------------------------
 @mixin skill_time {
     color: white;
-    background-color: yellow;
+    background-color: #CCCCFF;
 }
 // ---------------------------------
 // active用のmixin↓
@@ -156,7 +156,6 @@
 }
 // おみくじ
 .blink {
-  width: 50%;
   margin: 15px auto 10px auto;
   background-color: #CC66CC;
   color: #FFFFEE;
