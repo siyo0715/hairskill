@@ -54542,3 +54542,224 @@ Processing by UsersController#skill as HTML
 Completed 200 OK in 3701ms (Views: 3698.9ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/users/skill" for 126.78.106.33 at 2021-11-17 11:34:01 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#skill as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering users/skill.html.erb within layouts/application
+  Rendered users/skill.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 642ms (Views: 617.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/skill" for 126.78.106.33 at 2021-11-17 11:38:28 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#skill as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering users/skill.html.erb within layouts/application
+  Rendered users/skill.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 249ms (Views: 229.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs" for 126.78.106.33 at 2021-11-17 11:38:32 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/blogs/index.html.erb:43
+  Rendered simple_calendar/_month_calendar.html.erb (8.7ms)
+  Rendered blogs/index.html.erb within layouts/application (254.2ms)
+Completed 200 OK in 385ms (Views: 359.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/blogs" for 126.78.106.33 at 2021-11-17 11:38:35 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G0IA1uPcfkUpAgtd2KmmMdMHXziU/8tuxv5II0tf5yaHxRUcfff6mNyKOob/GtrPz9DHJuN6A4pe793X3tzZPA==", "blog"=>{"title"=>"", "content"=>"", "start_time(1i)"=>"2021", "start_time(2i)"=>"11", "start_time(3i)"=>"17", "start_time(4i)"=>"20", "start_time(5i)"=>"38"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/blogs_controller.rb:13
+Redirected to https://3a8282a74dfd4c8f8b7d4ff6737c87ef.vfs.cloud9.ap-northeast-1.amazonaws.com/blogs
+Completed 302 Found in 19ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs" for 126.78.106.33 at 2021-11-17 11:38:35 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/blogs/index.html.erb:43
+  Rendered simple_calendar/_month_calendar.html.erb (8.6ms)
+  Rendered blogs/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 75ms (Views: 70.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/blogs" for 126.78.106.33 at 2021-11-17 11:38:41 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"szsCVk6dJL9n/T+Kxz+3pH2LYRWOiJj9k9oSVSQpkbgvvBec0LagYpJ1DlHgjMtaYVz5C/kNUBkLy4ehsaqvog==", "blog"=>{"title"=>"これは", "content"=>"a", "start_time(1i)"=>"2021", "start_time(2i)"=>"11", "start_time(3i)"=>"17", "start_time(4i)"=>"20", "start_time(5i)"=>"38"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:13
+  [1m[36mBlog Create (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("user_id", "title", "content", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 2], ["title", "これは"], ["content", "a"], ["start_time", "2021-11-17 11:38:00"], ["created_at", "2021-11-17 11:38:41.378105"], ["updated_at", "2021-11-17 11:38:41.378105"]]
+  ↳ app/controllers/blogs_controller.rb:13
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:13
+Redirected to https://3a8282a74dfd4c8f8b7d4ff6737c87ef.vfs.cloud9.ap-northeast-1.amazonaws.com/blogs
+Completed 302 Found in 14ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/blogs" for 126.78.106.33 at 2021-11-17 11:38:41 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/blogs/index.html.erb:43
+  Rendered simple_calendar/_month_calendar.html.erb (5.3ms)
+  Rendered blogs/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/blogs" for 126.78.106.33 at 2021-11-17 11:38:47 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4iRv4aeFFx0Y+15I9DXUdaXaCPcLm/37IWpCZjjSEMx+o3orOa6TwO1zb5PThqiLuQ2Q6XweNR+5e9eSrVEu1g==", "blog"=>{"title"=>"a", "content"=>"", "start_time(1i)"=>"2021", "start_time(2i)"=>"11", "start_time(3i)"=>"17", "start_time(4i)"=>"20", "start_time(5i)"=>"38"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:13
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/blogs_controller.rb:13
+Redirected to https://3a8282a74dfd4c8f8b7d4ff6737c87ef.vfs.cloud9.ap-northeast-1.amazonaws.com/blogs
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/blogs" for 126.78.106.33 at 2021-11-17 11:38:47 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/blogs/index.html.erb:43
+  Rendered simple_calendar/_month_calendar.html.erb (5.2ms)
+  Rendered blogs/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 55ms (Views: 51.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blogs/7" for 126.78.106.33 at 2021-11-17 11:38:50 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ? AND "blogs"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:9
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 48ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs/7/edit" for 126.78.106.33 at 2021-11-17 11:38:52 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ? AND "blogs"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:24
+  Rendering blogs/edit.html.erb within layouts/application
+  Rendered blogs/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 68ms (Views: 62.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/blogs/7" for 126.78.106.33 at 2021-11-17 11:38:57 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J0hFRKs4AyRbpaVoqQ4G8RKddkQXEcfNFbXN+qH5STm7z1CONROH+a4tlLOOvXoPDkruWmCUDymNpFgONHp3Iw==", "blog"=>{"title"=>"hggiol", "content"=>"a", "start_time(1i)"=>"2021", "start_time(2i)"=>"11", "start_time(3i)"=>"17", "start_time(4i)"=>"20", "start_time(5i)"=>"38"}, "commit"=>"編集", "id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ? AND "blogs"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:29
+  [1m[36mBlog Update (0.4ms)[0m  [1m[33mUPDATE "blogs" SET "title" = ?, "updated_at" = ? WHERE "blogs"."id" = ?[0m  [["title", "hggiol"], ["updated_at", "2021-11-17 11:38:57.488492"], ["id", 7]]
+  ↳ app/controllers/blogs_controller.rb:29
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:29
+Redirected to https://3a8282a74dfd4c8f8b7d4ff6737c87ef.vfs.cloud9.ap-northeast-1.amazonaws.com/blogs
+Completed 302 Found in 15ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/blogs" for 126.78.106.33 at 2021-11-17 11:38:57 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/blogs/index.html.erb:43
+  Rendered simple_calendar/_month_calendar.html.erb (5.3ms)
+  Rendered blogs/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blogs/7" for 126.78.106.33 at 2021-11-17 11:38:59 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ? AND "blogs"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:9
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 46ms (Views: 41.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/blogs/7" for 126.78.106.33 at 2021-11-17 11:39:03 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"omlsOdtYaJaXgfvlO7nd7naDfPt2PX8RJF3pOXW6tkQ+7nnzRXPsS2IJyj4cCqEQalTk5QG4t/W8THzN4DmIXg==", "id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ? AND "blogs"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:19
+  [1m[36mBlog Destroy (0.4ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/blogs_controller.rb:19
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:19
+Redirected to https://3a8282a74dfd4c8f8b7d4ff6737c87ef.vfs.cloud9.ap-northeast-1.amazonaws.com/blogs
+Completed 302 Found in 14ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/blogs" for 126.78.106.33 at 2021-11-17 11:39:03 +0000
+Cannot render console from 126.78.106.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/blogs/index.html.erb:43
+  Rendered simple_calendar/_month_calendar.html.erb (5.1ms)
+  Rendered blogs/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.2ms)
+
+

@@ -10,12 +10,8 @@ class BlogsController < ApplicationController
   end
 
   def create
-    if  @blog = current_user.blogs.create(blog_parameter)
-      redirect_to blogs_path
-    else
-      @blog = current_user.blogs.find(params[:id])
-      render 'index'
-    end
+    @blog = current_user.blogs.create(blog_parameter)
+    redirect_to blogs_path
   end
 
   def destroy
