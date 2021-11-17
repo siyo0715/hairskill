@@ -156,6 +156,8 @@
 }
 // おみくじ
 .blink {
+  width: 50%;
+  margin: 15px auto 10px auto;
   background-color: #CC66CC;
   color: #FFFFEE;
   -webkit-animation: 1s ease-in-out infinite alternate;
@@ -192,7 +194,7 @@
   color: orange;
 }
 #time_control {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 .timer-moji {
   margin-top: 3px;
