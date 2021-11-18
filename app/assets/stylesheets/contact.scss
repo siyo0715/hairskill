@@ -5,7 +5,12 @@
 
 
 .contact_page_zone {
-  background-color: #FFCC99;
+  background: rgba(255, 255, 255, .7) image-url('AdobeStock_321565771.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  background-size:cover;
+  background-blend-mode: lighten;
 }
 
 .contact {

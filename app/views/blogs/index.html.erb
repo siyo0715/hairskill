@@ -3,7 +3,7 @@
   <h1 class="calendar_top">カレンダー</h1>
   <br>
   <h5 class="mt-2">ログイン:<span class="text-info"><%= current_user.last_name %></span>様</h5>
-    <div class="row">
+    <div class="blog_page_row">
       <div class="col-md-3">
 
       <% if @blog.errors.any? %>
@@ -16,12 +16,12 @@
         <%= form_with(model: @blog, local: true) do |form| %>
           <div class="title">
             <div class="form-tag mt-5">タイトル</div>
-            <%= form.text_field :title, placeholder: "1~15文字", class: "form-control" %>
+            <%= form.text_field :title, placeholder: "1~15文字", class: "form-control blog_form" %>
           </div>
 
           <div class="detail">
             <div class="form-tag">内容</div>
-            <%= form.text_area :content, size: '30x10', placeholder: "1~200文字", class: "form-control" %>
+            <%= form.text_area :content, size: '30x10', placeholder: "1~200文字", class: "form-control blog_form" %>
           </div>
 
           <div class="time">

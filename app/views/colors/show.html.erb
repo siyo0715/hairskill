@@ -9,7 +9,9 @@
         <h5 class="text-warning"><%= @color.evaluation %></h5>
         <h3 class=skill_image></h4><br>
       </div>
-      <%= attachment_image_tag @color, :color_image , class: 'd-block mx-auto cut-img mt-4' %>
+      <%=link_to Refile.attachment_url(@color, :color_image), "data-lightbox" => @color.id do %>
+        <%= attachment_image_tag @color, :color_image , class: 'd-block mx-auto cut-img mt-4' %>
+      <% end %>
       <div class="skill_edit_delete_back">
       <%= link_to '編集', edit_color_path(@color), class: "btn btn-primary m-4" %>
       <%= link_to '消去',color_path(@color.id), class: "btn btn-danger m-4", method: :delete, data: { confirm: '本当に削除しますか?（失われたデータは元には戻りません）' } %>

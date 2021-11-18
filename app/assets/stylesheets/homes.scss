@@ -57,7 +57,7 @@
 // z-index: -1になり（opacityも0）背面に移動
 // これがないと背面には回り込まない↓
 // -------------------------------------------
-@keyframes disappear{
+@keyframes disappear {
   70% {
     opacity: 1;
     cursor: progress;
@@ -136,7 +136,7 @@
   background-size:cover;
 }
 
-.theme{
+.theme {
   margin-left: 15px;
   font-size: 100px;
   font-family: Didot;

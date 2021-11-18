@@ -1,25 +1,25 @@
   <!--このページはbootstrapを主に使用しています-->
   <div class="calendar">
     <div class="show">
-
+      <div class="blog-page-text-back">
         <h3 class="text-success pt-3">タイトル</h3></br>
-        <h4 class="text-Dark"><%= @blog.title %></h4>
+        <h4 class="text-white"><%= @blog.title %></h4>
 
         <h3 class="text-success pt-3">内容</h3></br>
-        <h4 class="text-Dark"><%= @blog.content %></h4>
+        <h4 class="text-white"><%= @blog.content %></h4>
 
         <h3 class="text-success pt-3">予定日</h3></br>
-        <h4 class="text-Dark"><%= @blog.start_time.strftime("%m-%d") %></h4>
+        <h4 class="text-white"><%= @blog.start_time.strftime("%m-%d") %></h4>
 
         <h3 class="text-success pt-3">予定時間</h3></br>
-        <h4 class="text-Dark"><%= @blog.start_time.strftime("%H:%M") %></h4>
+        <h4 class="text-white"><%= @blog.start_time.strftime("%H:%M") %></h4>
 
         <h3 class="text-success pt-3">予定を作成した日</h3></br>
-        <h4 class="text-Dark"><%= @blog.created_at.strftime('%Y/%m/%d') %></h4>
+        <h4 class="text-white"><%= @blog.created_at.strftime('%Y/%m/%d') %></h4>
 
         <h3 class="text-success pt-3">予定を作成した時間</h3></br>
-        <h4 class="text-Dark"><%= @blog.created_at.strftime('%H:%M') %></h4>
-
+        <h4 class="text-white"><%= @blog.created_at.strftime('%H:%M') %></h4>
+      </div>
       <p>
         <h3 class="text-info">終了した予定は削除しましょう</h3>
       </p>

@@ -54,10 +54,6 @@
     color: whitesmoke;
     background-color: blue;
     box-shadow: 0 0 20px black;
-
-    &::before{
-      transform: none;
-    }
   }
 }
 // -----------------
@@ -267,6 +263,7 @@
 .skill_navigation_perm {
   background-color: teal;
   height: 200px;
+  aline-items: center;
 }
 .skill_navigation_zone {
   padding-left: 0;

@@ -1,5 +1,11 @@
 // cut.color.perm共通
 
+.skill_zone_row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: none;
+  margin-left: none;
+}
 .index {
     margin: 0 10px;
 }

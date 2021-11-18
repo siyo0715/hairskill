@@ -10,7 +10,9 @@
         <h5 class="text-warning"><%= @perm.evaluation %></h5>
         <h3 class=skill_image></h4><br>
       </div>
-      <%= attachment_image_tag @perm, :perm_image , class: 'd-block mx-auto cut-img mt-4' %>
+      <%=link_to Refile.attachment_url(@perm, :perm_image), "data-lightbox" => @perm.id do %>
+        <%= attachment_image_tag @perm, :perm_image , class: 'd-block mx-auto cut-img mt-4' %>
+      <% end %>
       <div class="skill_edit_delete_back">
       <%= link_to '編集', edit_perm_path(@perm), class: "btn btn-primary m-4" %>
       <%= link_to '消去',perm_path(@perm.id), class: "btn btn-danger m-4", method: :delete, data: { confirm: '本当に削除しますか?（失われたデータは元には戻りません）' } %>

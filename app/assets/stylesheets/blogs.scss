@@ -7,7 +7,22 @@
 //↓index
 // -----
 .calendar {
-    background-color: #FFCC99;
+  background: rgba(255, 255, 255, .5) image-url('shutterstock_1715459824.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  background-size:cover;
+  background-blend-mode: lighten;
+}
+
+.blog-page-text-back {
+    background-color: rgba(0, 0, 0, .5);
+}
+.blog_page_row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: none;
+  margin-left: none;
 }
 .calendar_top {
     color: olive;

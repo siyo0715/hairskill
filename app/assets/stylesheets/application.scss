@@ -30,7 +30,7 @@
 body {
   width: 80%;
   margin: 0 auto;
-  padding: 0;
+  padding-top: 118px;
   border: 0;
   font-size: 100%;
   min-height: 100vh;
@@ -43,10 +43,14 @@ body {
 }
 
 .header {
-  width: 100%;
-  display: flex;
-  background-color: black;
-  border: 5px solid silver;
+    width: 80%;
+    position: fixed;
+    top: 0;
+    left: 10%;
+    display: flex;
+    z-index: 1;
+    background-color: black;
+    border: 5px solid silver;
 }
 .header_logo {
   width: 20%;
@@ -127,6 +131,21 @@ body {
   // -----------------------
   // users/informationのcss
   // -----------------------
+  body {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 118px;
+  }
+
+  .header {
+    width: 80%;
+    position: fixed;
+    top: 0;
+    left: 10%;
+    display: flex;
+    background-color: black;
+    border: 5px solid silver;
+  }
   .slide {
     background-size: cover;
     background-position: center;
@@ -152,11 +171,16 @@ body {
 
   body {
     width: 100%;
+    padding-top: 151px;
   }
 
   .header {
+    width: 100%;
     height: 150px;
     display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
   .header_logo {
     width: 100%;
@@ -245,10 +269,15 @@ body {
 
     body {
       width: 100%;
+      padding-top: 95px;
     }
 
     .header {
+      width: 100%;
       display: inherit;
+      position: fixed;
+      top: 0;
+      left: 0
     }
     .header_logo {
       width: 100%;
@@ -400,6 +429,7 @@ body {
   // cuts/indexのcss
   // ---------------
   .cut_page_zone {
+    whith: 100%;
     background: rgba(255, 255, 255, .3) image-url('shutterstock_178947776.jpg');
     @include skill_index;
   }
@@ -414,17 +444,29 @@ body {
     min-height: 100px;
     background-size: cover;
     background-position: center;
-    }
+  }
+  // -----------------
+  // blogのcss
+  //------------------
+
+  .blog_form {
+    background-color: rgba(255,255,255,.5);
+  }
 }
 
 @media (max-width: 340px) and (min-width: 0px) {
 
     body {
       width: 100%;
+      padding-top: 70px;
     }
 
     .header {
+      width: 100%;
       display: inherit;
+      position: fixed;
+      top: 0;
+      left: 0;
     }
     .header_logo {
       width: 100%;
@@ -436,9 +478,7 @@ body {
       padding: 5px;
     }
     .header_nav {
-      width: 100%;
       display: none;
-      height: 32px;
 
         ul {
         list-style: none;
@@ -504,7 +544,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 100px;
+    min-height: 0px;
   }
 
     .theme{
@@ -589,6 +629,7 @@ body {
   // ----------------
 
   .color_page_zone {
+    width: 356px;
     background: rgba(255, 255, 255, .2) image-url('AdobeStock_198683617.jpeg');
     @include skill_index;
   }
@@ -617,6 +658,14 @@ body {
     @include skill_index;
   }
   .cut_form {
+    background-color: rgba(255,255,255,.5);
+  }
+
+  // --------------------
+  // blogのcss
+  //---------------------
+
+  .blog_form {
     background-color: rgba(255,255,255,.5);
   }
 }
