@@ -1,4 +1,4 @@
-// Cut.Color.Perm共通
+// cut.color.perm共通
 
 .index {
     margin: 0 10px;
@@ -17,7 +17,10 @@
     margin: 0 10px;
 }
 
-// CutのSCSS
+// ---------
+// cutのcss
+// ---------
+
 .cut_page_zone {
   background: rgba(255, 255, 255, .7) image-url('shutterstock_178947776.jpg');
   background-position: top;
@@ -40,7 +43,10 @@
     width: 50%;
 }
 
-// ColorのSCSS
+//------------
+// colorのcss
+// -----------
+
 .color_page_zone {
   background: rgba(255, 255, 255, .4) image-url('AdobeStock_198683617.jpeg');
   background-position: top;
@@ -59,8 +65,9 @@
 .color_index {
     color: #A52A2A;
 }
-
-// PermのSCSS
+// ---------
+// permのcss
+// ---------
 .perm_page_zone {
   background-color: #FFF5EE;
   background: rgba(255, 255, 255, .6) image-url('shutterstock_1177580824.jpg');
