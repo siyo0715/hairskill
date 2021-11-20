@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-
+  # ↓ゲストログイン
+  post '/guests/guest_sign_in', to: 'guests#new_guest'
   root to: 'homes#top'
   # ↓ナビゲーションページ
   get 'users/information' => "users#information", as: "information"

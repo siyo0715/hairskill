@@ -59,6 +59,11 @@
             <!--↓もしログインしていなかったら-->
             <% else %>
               <li class="">
+                <%= link_to guests_guest_sign_in_path, method: :post, class:"h-seni" do %>
+                  <span>ゲストログイン</span>
+                <% end %>
+              </li>
+              <li class="">
                 <%= link_to new_user_registration_path, class:"h-seni" do %>
                   <span>新規登録</span>
                 <% end %>
@@ -133,6 +138,12 @@
               </li>
             <!--↓もしログインしていなかったら-->
             <% else %>
+              <li class="">
+                <%= link_to guests_guest_sign_in_path, method: :post, class:"f-seni" do %>
+                  <span class="fas fa-user-shield" style="display: block;"></span>
+                  <span>ゲスト</span>
+                <% end %>
+              </li>
               <li class="">
                 <%= link_to new_user_registration_path, class:"f-seni" do %>
                   <span class="fas fa-user-shield" style="display: block;"></span>
