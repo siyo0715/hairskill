@@ -2,7 +2,7 @@
   <h2 class="midashi_n">Log in</h2>
   <div class= "post_profile">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
+    <%= render "devise/shared/error_messages", resource: resource %>
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "yamada2tr@gmail.com", class: "post_zone" %>

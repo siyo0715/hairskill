@@ -265,7 +265,7 @@ body {
 }
 
 
-@media (max-width: 699px) and (min-width: 340px) {
+@media (max-width: 699px) and (min-width: 0px) {
 
     body {
       width: 100%;
@@ -544,7 +544,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 0px;
+    min-height: 100px;
   }
 
     .theme{
@@ -629,7 +629,7 @@ body {
   // ----------------
 
   .color_page_zone {
-    width: 356px;
+    width: 100%;
     background: rgba(255, 255, 255, .2) image-url('AdobeStock_198683617.jpeg');
     @include skill_index;
   }
@@ -642,6 +642,7 @@ body {
   // ---------------
 
   .perm_page_zone {
+    width: 100%;
     background: rgba(255, 255, 255, .2) image-url('shutterstock_1177580824.jpg');
     @include skill_index;
   }
@@ -654,6 +655,7 @@ body {
   // ---------------
 
   .cut_page_zone {
+    width: 100%;
     background: rgba(255, 255, 255, .2) image-url('shutterstock_178947776.jpg');
     @include skill_index;
   }
