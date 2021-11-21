@@ -1,13 +1,13 @@
   <!--このページはbootstrapを主に使用しています-->
   <div class="color_page_zone">
-    <div class="color-page-text-back text-center">
+    <div class="color_page_text_back text-center">
         <h3 class="text-success pt-3">タイトル</h3></br>
-        <h3 class="text-warning"><%= @color.title %></h4>
+        <h3 class="skill_record_title_detail_evaluation"><%= @color.title %></h4>
         <h3 class="text-success pt-3">詳細</h4><br>
-        <h5 class="text-warning"><%= @color.detail %></h5>
+        <h5 class="skill_record_title_detail_evaluation"><%= @color.detail %></h5>
         <h3 class="text-success pt-3">評価</h3>
-        <h5 class="text-warning"><%= @color.evaluation %></h5>
-        <h3 class=skill_image></h4><br>
+        <h5 class="skill_record_title_detail_evaluation"><%= @color.evaluation %></h5>
+        <br>
       </div>
       <%=link_to Refile.attachment_url(@color, :color_image), "data-lightbox" => @color.id do %>
         <%= attachment_image_tag @color, :color_image , class: 'd-block mx-auto cut-img mt-4' %>

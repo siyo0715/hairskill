@@ -1,14 +1,14 @@
   <!--このページはbootstrapを主に使用しています-->
   <div class="cut_page_zone">
     <div class="show">
-      <div class="cut-page-text-back text-center">
+      <div class="cut_page_text_back text-center">
         <h3 class="text-success pt-3">タイトル</h3></br>
-        <h3 class="text-warning"><%= @cut.title %></h4>
+        <h3 class="skill_record_title_detail_evaluation"><%= @cut.title %></h4>
         <h3 class="text-success pt-3">詳細</h4><br>
-        <h5 class="text-warning"><%= @cut.detail %></h5>
+        <h5 class="skill_record_title_detail_evaluation"><%= @cut.detail %></h5>
         <h3 class="text-success pt-3">評価</h3>
-        <h5 class="text-warning"><%= @cut.evaluation %></h5>
-        <h3 class=skill_image></h4><br>
+        <h5 class="skill_record_title_detail_evaluation"><%= @cut.evaluation %></h5>
+        <br>
       </div>
       <%=link_to Refile.attachment_url(@cut, :cut_image), "data-lightbox" => @cut.id do %>
         <%= attachment_image_tag @cut, :cut_image , class: 'd-block mx-auto cut-img mt-4' %>

@@ -6,4 +6,5 @@ class Perm < ApplicationRecord
   validates :detail, presence: true, length: { minimum: 1, maximun: 500 }
   validates :evaluation, presence: true
   validates :perm_image, presence: true
+
 end

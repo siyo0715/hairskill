@@ -1,5 +1,4 @@
 // cut.color.perm共通
-
 .skill_zone_row {
   display: flex;
   flex-wrap: wrap;
@@ -14,6 +13,11 @@
 }
 .show {
     margin: 0 10px;
+}
+
+.skill_record_title_detail_evaluation {
+    color: gold;
+    font-family: fantasy;
 }
 .skill_edit_delete_back{
   text-align: center;
@@ -35,7 +39,7 @@
   background-size:cover;
   background-blend-mode: lighten;
 }
-.cut-page-text-back {
+.cut_page_text_back {
     background-color: rgba(0, 0, 0, .5);
 }
 .cut {
@@ -61,7 +65,7 @@
   background-size:cover;
   background-blend-mode: lighten;
 }
-.color-page-text-back {
+.color_page_text_back {
     background-color: rgba(0, 0, 0, .5);
 }
 
@@ -83,7 +87,7 @@
   background-size:cover;
   background-blend-mode: lighten;
 }
-.perm-page-text-back {
+.perm_page_text_back {
     background-color: rgba(0, 0, 0, .5);
 }
 .perm {
