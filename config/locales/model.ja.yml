@@ -4,6 +4,9 @@ ja:
       user:
         signed_out: ログアウトしました!
         signed_in: ログインしました!
+    registrations:
+      user:
+        signed_up: 新規登録完了!
     passwords:
       user:
         send_instructions: メールをご確認してください

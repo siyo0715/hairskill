@@ -217,6 +217,10 @@
   margin-top: 3px;
   color: snow;
 }
+#start, #stop, #reset {
+  padding: 0 5px;
+  background-color: #fff;
+}
 #start {
   transition: all 0.5s;
 
