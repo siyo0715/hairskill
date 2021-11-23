@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # ↓ゲストログイン
   post '/guests/guest_sign_in', to: 'guests#new_guest'
   root to: 'homes#top'
+
   # ↓ナビゲーションページ
   get 'users/information' => "users#information", as: "information"
   get 'users/skill' => "users#skill", as: "skill"

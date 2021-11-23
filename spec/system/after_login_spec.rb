@@ -6,6 +6,7 @@ describe 'ユーザログイン後のテスト' do
   let(:color) { create(:color, user: user) }
   let(:perm) { create(:perm, user: user) }
   let(:blog) { create(:blog, user: user) }
+  let(:contact) { create(:contact)}
   before do
     visit new_user_session_path
     fill_in 'user[email]', with: user.email
@@ -210,13 +211,13 @@ describe 'ユーザログイン後のテスト' do
       users_blog_link = find_all('a')[3].native.inner_text
       expect(users_blog_link).to match(/カレンダー/)
     end
-    # it '変更が表示される: 左上から5番目のリンクが「変更」である' do
-    #   users_edit_link = find_all('a')[4].native.inner_text
-    #   expect(users_edit_link).to match(/変更/)
-    # end
-    # it '連絡リンクが表示される: 左上から6番目のリンクが「連絡」である' do
-    #   contact_link = find_all('a')[5].native.inner_text
-    #   expect(contact_link).to match(/連絡/)
-    # end
+    it '連絡リンクが表示される: 左上から6番目のリンクが「連絡」である' do
+      users_contact_link = find_all('a')[4].native.inner_text
+      expect(users_contact_link).to match(/連絡/)
+    end
+    it '変更が表示される: 左上から5番目のリンクが「変更」である' do
+      users_edit_link = find_all('a')[5].native.inner_text
+      expect(users_edit_link).to match(/変更/)
+    end
   end
 end

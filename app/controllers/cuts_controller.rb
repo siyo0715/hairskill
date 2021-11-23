@@ -2,7 +2,7 @@ class CutsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @cuts = current_user.cuts.page(params[:page]).per(10).order('updated_at DESC')
+    @cuts = current_user.cuts.page(params[:page]).per(10).order('updated_at DESC').search(params[:search])
     @cut = Cut.new
   end
 

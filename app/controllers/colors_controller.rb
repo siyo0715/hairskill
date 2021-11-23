@@ -1,7 +1,7 @@
 class ColorsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @colors = current_user.colors.page(params[:page]).per(10).order('updated_at DESC')
+    @colors = current_user.colors.page(params[:page]).per(10).order('updated_at DESC').search(params[:search])
     @color = Color.new
   end
 

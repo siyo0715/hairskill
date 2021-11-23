@@ -46,6 +46,15 @@
 
         <div class="col-md-8">
           <div class="perm_index">パーマテーブル</div>
+          <!--検索--->
+        <div class="kensaku">
+          <%= form_tag(perms_path,:method => "get") do %>
+          <%= text_field_tag :search %>
+          <%= submit_tag "Search" ,:title => nil,class: "button is-info"%>
+          <% end %>
+          <% @perms %>
+          <%= link_to '戻す', perms_path, class: "btn btn-dark ml-1" %>
+        </div>
           <div class="ml-5"><%= paginate @perms %></div>
             <table class="table ml-2">
               <thead class="thead-dark">

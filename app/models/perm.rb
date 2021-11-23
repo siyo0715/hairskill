@@ -7,4 +7,11 @@ class Perm < ApplicationRecord
   validates :evaluation, presence: true
   validates :perm_image, presence: true
 
+  def self.search(search)
+    if search
+      where(['title LIKE?',"%#{search}%"])
+    else
+      all
+    end
+  end
 end

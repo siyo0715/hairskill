@@ -1,7 +1,7 @@
 class PermsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @perms = current_user.perms.page(params[:page]).per(10).order('updated_at DESC')
+    @perms = current_user.perms.page(params[:page]).per(10).order('updated_at DESC').search(params[:search])
     @perm = Perm.new
   end
 

@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:top, :about]
   before_action :configure_permitted_parameters, if: :devise_controller?
+
   def information
   end
-end
 
-def skill
+  def skill
+  end
 end
 
 private
