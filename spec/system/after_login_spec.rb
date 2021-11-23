@@ -2,7 +2,10 @@ require 'rails_helper'
 
 describe 'ユーザログイン後のテスト' do
   let(:user) { create(:user) }
-
+  let(:cut) { create(:cut, user: user) }
+  let(:color) { create(:color, user: user) }
+  let(:perm) { create(:perm, user: user) }
+  let(:blog) { create(:blog, user: user) }
   before do
     visit new_user_session_path
     fill_in 'user[email]', with: user.email
@@ -60,12 +63,12 @@ describe 'ユーザログイン後のテスト' do
 
   describe 'カット編集画面のテスト' do
     before do
-      visit '/cuts/:id/edit'
+      visit edit_cut_path(cut)
     end
 
     context '表示内容の確認' do
       it 'URLが正しい' do
-        expect(current_path).to eq '/cuts/:id/edit'
+        expect(current_path).to eq '/cuts/' + cut.id.to_s + '/edit'
       end
     end
   end
@@ -94,6 +97,18 @@ describe 'ユーザログイン後のテスト' do
     end
   end
 
+  describe 'カラー編集画面のテスト' do
+    before do
+      visit edit_color_path(color)
+    end
+
+    context '表示内容の確認' do
+      it 'URLが正しい' do
+        expect(current_path).to eq '/colors/' + color.id.to_s + '/edit'
+      end
+    end
+  end
+
   describe 'パーマ一覧画面のテスト' do
     before do
       visit '/perms'
@@ -118,6 +133,18 @@ describe 'ユーザログイン後のテスト' do
     end
   end
 
+  describe 'パーマ編集画面のテスト' do
+    before do
+      visit edit_perm_path(perm)
+    end
+
+    context '表示内容の確認' do
+      it 'URLが正しい' do
+        expect(current_path).to eq '/perms/' + perm.id.to_s + '/edit'
+      end
+    end
+  end
+
   describe 'カレンダー一覧のテスト' do
     before do
       visit '/blogs'
@@ -132,6 +159,17 @@ describe 'ユーザログイン後のテスト' do
     before do
       visit '/blogs/'
     end
+    describe 'カレンダー編集画面のテスト' do
+    before do
+      visit edit_blog_path(blog)
+    end
+
+    context '表示内容の確認' do
+      it 'URLが正しい' do
+        expect(current_path).to eq '/blogs/' + blog.id.to_s + '/edit'
+      end
+    end
+  end
 
     context '表示内容の確認' do
       it 'URLが正しい' do
