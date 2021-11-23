@@ -7,6 +7,7 @@ describe ' 仕上げのテスト' do
   let!(:perm) { create(:perm, user: user) }
   let!(:blog) { create(:blog, user: user) }
   let!(:contact) { create(:contact)}
+
   before do
     visit new_user_session_path
     fill_in 'user[email]', with: user.email
@@ -17,6 +18,10 @@ end
 
 describe 'サクセスメッセージのテスト' do
   subject { page }
+
+  before do
+    @user = FactoryBot.create(:user)
+  end
 
   it 'ユーザ新規登録成功時' do
     visit new_user_registration_path
@@ -30,12 +35,22 @@ describe 'サクセスメッセージのテスト' do
     is_expected.to have_content '新規登録完了'
   end
 
-  # it 'ユーザログイン成功時' do
+  it 'ユーザログイン成功時' do
+    visit new_user_session_path
+    fill_in 'user[email]', with: @user.email
+    fill_in 'user[password]', with: @user.password
+    click_button 'Log in'
+    is_expected.to have_content 'ログインしました!'
+  end
+
+  # it 'ユーザログアウト成功時' do
   #   visit new_user_session_path
-  #   fill_in 'user[email]', with: Faker::Internet.email
-  #   fill_in 'user[password]', with: 'password'
+  #   fill_in 'user[name]', with: @user.email
+  #   fill_in 'user[password]', with: @user.password
   #   click_button 'Log in'
-  #   is_expected.to have_content 'ログインしました!'
+  #   logout_link = find_all('a')[6].native.inner_text
+  #   logout_link = logout_link.gsub(/\n/, '').gsub(/\A\s*/, '').gsub(/\s*\Z/, '')
+  #   click_link logout_link
+  #   is_expected.to have_content 'ログアウトしました！'
   # end
-  
 end
