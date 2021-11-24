@@ -43,14 +43,12 @@ describe 'サクセスメッセージのテスト' do
     is_expected.to have_content 'ログインしました!'
   end
 
-  # it 'ユーザログアウト成功時' do
-  #   visit new_user_session_path
-  #   fill_in 'user[name]', with: @user.email
-  #   fill_in 'user[password]', with: @user.password
-  #   click_button 'Log in'
-  #   logout_link = find_all('a')[6].native.inner_text
-  #   logout_link = logout_link.gsub(/\n/, '').gsub(/\A\s*/, '').gsub(/\s*\Z/, '')
-  #   click_link logout_link
-  #   is_expected.to have_content 'ログアウトしました！'
-  # end
+  it 'ユーザログアウト成功時' do
+    visit new_user_session_path
+    fill_in 'user[email]', with: @user.email
+    fill_in 'user[password]', with: @user.password
+    click_button 'Log in'
+    click_link 'header-logout-link'
+    page.has_text?('ログアウトしました！')
+  end
 end

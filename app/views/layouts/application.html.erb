@@ -52,7 +52,7 @@
                 <% end %>
               </li>
               <li class="">
-                <%= link_to destroy_user_session_path, method: :delete, class:"h-seni" do %>
+                <%= link_to destroy_user_session_path, method: :delete, id: "header-logout-link", class:"h-seni" do %>
                   <span>退出</span>
                 <% end %>
               </li>
@@ -131,7 +131,7 @@
                 <% end %>
               </li>
               <li class="">
-                <%= link_to destroy_user_session_path, method: :delete, class:"f-seni" do %>
+                <%= link_to destroy_user_session_path, method: :delete, id: "footer-logout-link", class:"f-seni" do %>
                   <span class="fas fa-sign-out-alt" style="display: block;"></span>
                   <span class="hurigana">退出</span>
                 <% end %>
