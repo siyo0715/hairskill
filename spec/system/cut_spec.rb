@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-  describe 'Cutモデルのテスト', type: :model do
+describe 'Cutモデルのテスト', type: :model do
   describe 'バリデーションのテスト' do
     subject { cut.valid? }
 
@@ -10,52 +10,53 @@ require 'rails_helper'
 
     context 'titleカラム' do
       it '空欄でないこと' do
-          cut.title = ''
-          cut.valid?
+        cut.title = ''
+        cut.valid?
       end
       it '1文字以上であること:1は○' do
-          cut.title = Faker::Lorem.characters(number: 1)
-          cut.valid?
+        cut.title = Faker::Lorem.characters(number: 1)
+        cut.valid?
       end
       it '20文字以下であること:20は○' do
-          cut.title = Faker::Lorem.characters(number: 20)
-          cut.valid?
+        cut.title = Faker::Lorem.characters(number: 20)
+        cut.valid?
       end
       it '20文字以下であること:21は×' do
-          cut.title = Faker::Lorem.characters(number: 21)
-          cut.valid?
-
+        cut.title = Faker::Lorem.characters(number: 21)
+        cut.valid?
       end
     end
 
     context 'detailカラム' do
       it '空欄でないこと' do
-          cut.detail = ''
-          cut.valid?
+        cut.detail = ''
+        cut.valid?
       end
       it '1文字以上であること:1は○' do
-          cut.detail = Faker::Lorem.characters(number: 1)
-          cut.valid?
+        cut.detail = Faker::Lorem.characters(number: 1)
+        cut.valid?
       end
       it '500文字以下であること:500は○' do
-          cut.detail = Faker::Lorem.characters(number: 500)
-          cut.valid?
+        cut.detail = Faker::Lorem.characters(number: 500)
+        cut.valid?
       end
       it '500文字以下であること:501は×' do
-          cut.detail = Faker::Lorem.characters(number: 501)
-          cut.valid?
+        cut.detail = Faker::Lorem.characters(number: 501)
+        cut.valid?
       end
     end
+
     context 'evaluationカラム' do
       it '空欄でないこと' do
-          cut.evaluation = ''
-          cut.valid?
+        cut.evaluation = ''
+        cut.valid?
       end
     end
+
     context 'cut_imageカラム' do
       it '空欄でないこと' do
-          cut.cut_image = ''
-          cut.valid?
+        cut.cut_image = ''
+        cut.valid?
       end
     end
   end

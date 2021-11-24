@@ -10,7 +10,6 @@ class BlogsController < ApplicationController
   end
 
   def create
-
     @blog = Blog.new(blog_parameter)
     @blog.user_id = current_user.id
     if @blog.save

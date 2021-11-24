@@ -19,12 +19,15 @@
 .show {
     margin: 0 10px;
 }
-
+.skill_column_title_detail_evaluation {
+  color: navajowhite;
+}
 .skill_record_title_detail_evaluation {
     color: gold;
     font-family: fantasy;
 }
-.skill_edit_delete_back{
+
+.skill_edit_delete_back {
   text-align: center;
 }
 
@@ -46,6 +49,7 @@
 }
 .cut_page_text_back {
     background-color: rgba(0, 0, 0, .5);
+    text-align: center;
 }
 .cut {
     color: #191970;
@@ -72,6 +76,7 @@
 }
 .color_page_text_back {
     background-color: rgba(0, 0, 0, .5);
+    text-align: center;
 }
 
 .color {
@@ -94,6 +99,7 @@
 }
 .perm_page_text_back {
     background-color: rgba(0, 0, 0, .5);
+    text-align: center;
 }
 .perm {
     color: #008080;

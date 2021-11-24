@@ -6,7 +6,7 @@ describe ' 仕上げのテスト' do
   let!(:color) { create(:color, user: user) }
   let!(:perm) { create(:perm, user: user) }
   let!(:blog) { create(:blog, user: user) }
-  let!(:contact) { create(:contact)}
+  let!(:contact) { create(:contact) }
 
   before do
     visit new_user_session_path

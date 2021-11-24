@@ -6,7 +6,8 @@ describe 'ユーザログイン後のテスト' do
   let(:color) { create(:color, user: user) }
   let(:perm) { create(:perm, user: user) }
   let(:blog) { create(:blog, user: user) }
-  let(:contact) { create(:contact)}
+  let(:contact) { create(:contact) }
+
   before do
     visit new_user_session_path
     fill_in 'user[email]', with: user.email
@@ -156,29 +157,32 @@ describe 'ユーザログイン後のテスト' do
         expect(current_path).to eq '/blogs'
       end
     end
-  describe 'カレンダー詳細画面のテスト' do
-    before do
-      visit '/blogs/'
-    end
-    describe 'カレンダー編集画面のテスト' do
-    before do
-      visit edit_blog_path(blog)
-    end
 
-    context '表示内容の確認' do
-      it 'URLが正しい' do
-        expect(current_path).to eq '/blogs/' + blog.id.to_s + '/edit'
+    describe 'カレンダー詳細画面のテスト' do
+      before do
+        visit '/blogs/'
+      end
+
+      describe 'カレンダー編集画面のテスト' do
+        before do
+          visit edit_blog_path(blog)
+        end
+
+        context '表示内容の確認' do
+          it 'URLが正しい' do
+            expect(current_path).to eq '/blogs/' + blog.id.to_s + '/edit'
+          end
+        end
+      end
+
+      context '表示内容の確認' do
+        it 'URLが正しい' do
+          expect(current_path).to eq '/blogs/'
+        end
       end
     end
-  end
 
-    context '表示内容の確認' do
-      it 'URLが正しい' do
-        expect(current_path).to eq '/blogs/'
-      end
-    end
-  end
-  describe '連絡画面のテスト' do
+    describe '連絡画面のテスト' do
       before do
         visit '/about'
       end
@@ -190,6 +194,7 @@ describe 'ユーザログイン後のテスト' do
       end
     end
   end
+
   describe 'ヘッダーのテスト: ログインしている場合' do
     before do
       visit root_path

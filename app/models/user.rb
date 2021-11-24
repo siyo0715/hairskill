@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   validates :first_name, presence: true, length: { minimum: 1, maximum: 20 }
   validates :last_name,  presence: true, length: { minimum: 1, maximum: 20 }
-  validates :phone_number, presence: true,length: { minimun: 9, maximum: 13}
+  validates :phone_number, presence: true, length: { minimun: 9, maximum: 13 }
   has_many :blogs, dependent: :destroy
   has_many :cuts, dependent: :destroy
   has_many :colors, dependent: :destroy
