@@ -45,12 +45,12 @@
         <div class="col-md-8">
           <div class="color_index">カラーテーブル</div>
             <div class="kensaku">
-            <%= form_tag(cuts_path,:method => "get") do %>
+            <%= form_tag(colors_path,:method => "get") do %>
             <%= text_field_tag :search %>
             <%= submit_tag "Search" ,:title => nil,class: "button is-info"%>
             <% end %>
             <% @colors %>
-            <%= link_to '戻す', cuts_path, class: "btn btn-dark ml-1" %>
+            <%= link_to '戻す', colors_path, class: "btn btn-dark ml-1" %>
             </div>
             <table class="table">
               <thead class="thead-dark">
