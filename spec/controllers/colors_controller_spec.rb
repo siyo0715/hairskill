@@ -39,7 +39,7 @@ RSpec.describe ColorsController, type: :controller do
       get :show, params: { id: @color.id }
       expect(response).to be_successful
     end
-    it "returns a 200 response" do
+    it "returns a 200レスポンスが返ってきているか？" do
       sign_in @user
       get :show, params: { id: @color.id }
       expect(response).to have_http_status "200"
@@ -59,11 +59,11 @@ RSpec.describe ColorsController, type: :controller do
       @user = FactoryBot.create(:user)
       @color = FactoryBot.create(:color, user_id: @user.id)
     end
-    # it "正常に日程を作成できているか？" do
-    #   sign_in @user
-    #   post :create, params: { color: {title: @cut.title, detail: @cut.detail, evaluation: @cut.evaluation, perm_image: @color.color_image} }
-    #   expect(response).to redirect_to colors_path
-    # end
+    it "正常に投稿を作成できているか？" do
+      sign_in @user
+      post :create, params: { color: {title: @color.title, detail: @color.detail, evaluation: @color.evaluation, color_image: Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/sample.png'), 'image/png')} }
+      expect(response).to redirect_to colors_path
+    end
   end
 
   describe "#edit" do
@@ -77,7 +77,7 @@ RSpec.describe ColorsController, type: :controller do
       get :edit, params: { id: @color.id }
       expect(response).to be_successful
     end
-    it "returns a 200 response" do
+    it "returns a 200レスポンスが返ってきているか？" do
       sign_in @user
       get :edit, params: { id: @color.id }
       expect(response).to have_http_status "200"
@@ -97,7 +97,7 @@ RSpec.describe ColorsController, type: :controller do
       @user = FactoryBot.create(:user)
       @color = FactoryBot.create(:color, user_id: @user.id)
     end
-    context "正常に記事を削除できるか？" do
+    context "正常に投稿を削除できるか？" do
       it "deletes an color" do
         sign_in @user
         expect {

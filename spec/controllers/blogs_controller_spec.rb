@@ -39,7 +39,7 @@ RSpec.describe BlogsController, type: :controller do
       get :show, params: { id: @blog.id }
       expect(response).to be_successful
     end
-    it "returns a 200 response" do
+    it "returns a 200レスポンスが返ってきているか？" do
       sign_in @user
       get :show, params: { id: @blog.id }
       expect(response).to have_http_status "200"
@@ -61,7 +61,7 @@ RSpec.describe BlogsController, type: :controller do
     end
     it "正常に日程を作成できているか？" do
       sign_in @user
-      post :create, params: { blog: {title: @blog.title, content: @blog.content, start_time: @blog.start_time } }
+      post :create, params: { id: @blog.id,blog: {title: @blog.title, content: @blog.content, start_time: @blog.start_time } }
       expect(response).to redirect_to blogs_path
     end
   end
@@ -77,7 +77,7 @@ RSpec.describe BlogsController, type: :controller do
       get :edit, params: { id: @blog.id }
       expect(response).to be_successful
     end
-    it "returns a 200 response" do
+    it "returns a 200レスポンスが返ってきているか？" do
       sign_in @user
       get :edit, params: { id: @blog.id }
       expect(response).to have_http_status "200"
@@ -92,17 +92,17 @@ RSpec.describe BlogsController, type: :controller do
     end
   end
 
-  # describe "#update" do
-  #   before do
-  #     @user = FactoryBot.create(:user)
-  #     @blog = FactoryBot.create(:blog, user_id: @user.id)
-  #   end
-  #   it "正常に変更を更新を作成できているか？" do
-  #     sign_in @user
-  #     patch :update, params: { blog: {title: @blog.title, content: @blog.content, start_time: @blog.start_time } }
-  #     expect(response).to redirect_to blogs_path
-  #   end
-  # end
+  describe "#update" do
+    before do
+      @user = FactoryBot.create(:user)
+      @blog = FactoryBot.create(:blog, user_id: @user.id)
+    end
+    it "正常に変更を更新を作成できているか？" do
+      sign_in @user
+      patch :update, params: { id: @blog.id,blog: {title: @blog.title, content: @blog.content, start_time: @blog.start_time } }
+      expect(response).to redirect_to blogs_path
+    end
+  end
   describe "#destroy" do
     before do
       @user = FactoryBot.create(:user)

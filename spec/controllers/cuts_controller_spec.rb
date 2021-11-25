@@ -39,7 +39,7 @@ RSpec.describe CutsController, type: :controller do
       get :show, params: { id: @cut.id }
       expect(response).to be_successful
     end
-    it "returns a 200 response" do
+    it "200レスポンスが返ってきているか？" do
       sign_in @user
       get :show, params: { id: @cut.id }
       expect(response).to have_http_status "200"
@@ -59,11 +59,11 @@ RSpec.describe CutsController, type: :controller do
       @user = FactoryBot.create(:user)
       @cut = FactoryBot.create(:cut, user_id: @user.id)
     end
-    # it "正常に日程を作成できているか？" do
-    #   sign_in @user
-    #   post :create, params: { cut: {title: @cut.title, detail: @cut.detail, evaluation: @cut.evaluation, cut_image: @cut.cut_image} }
-    #   expect(response).to redirect_to cuts_path
-    # end
+    it "正常に投稿を作成できているか？" do
+      sign_in @user
+      post :create, params: { id: @cut.id,cut: {title: @cut.title, detail: @cut.detail, evaluation: @cut.evaluation, cut_image: Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/sample.png'), 'image/png')} }
+      expect(response).to redirect_to cuts_path
+    end
   end
 
   describe "#edit" do
@@ -77,7 +77,7 @@ RSpec.describe CutsController, type: :controller do
       get :edit, params: { id: @cut.id }
       expect(response).to be_successful
     end
-    it "returns a 200 response" do
+    it "200レスポンシブが返ってきているか？" do
       sign_in @user
       get :edit, params: { id: @cut.id }
       expect(response).to have_http_status "200"
@@ -92,12 +92,24 @@ RSpec.describe CutsController, type: :controller do
     end
   end
 
-   describe "#destroy" do
+  # describe "#update" do
+  #   before do
+  #     @user = FactoryBot.create(:user)
+  #     @blog = FactoryBot.create(:cut, user_id: @user.id)
+  #   end
+  #   it "正常に変更を更新を作成できているか？" do
+  #     sign_in @user
+  #     patch :update, params: {id: @cut.id,cut: {title: @cut.title, detail: @cut.detail, evaluation: @cut.evaluation, cut_image: Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/sample.png'), 'image/png')} }
+  #     expect(response).to redirect_to cuts_path
+  #   end
+  # end
+
+  describe "#destroy" do
     before do
       @user = FactoryBot.create(:user)
       @cut = FactoryBot.create(:cut, user_id: @user.id)
     end
-    context "正常に記事を削除できるか？" do
+    context "正常に投稿を削除できるか？" do
       it "deletes an cut" do
         sign_in @user
         expect {
