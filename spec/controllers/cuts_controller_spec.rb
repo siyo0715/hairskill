@@ -92,17 +92,17 @@ RSpec.describe CutsController, type: :controller do
     end
   end
 
-  # describe "#update" do
-  #   before do
-  #     @user = FactoryBot.create(:user)
-  #     @blog = FactoryBot.create(:cut, user_id: @user.id)
-  #   end
-  #   it "正常に変更を更新を作成できているか？" do
-  #     sign_in @user
-  #     patch :update, params: {id: @cut.id,cut: {title: @cut.title, detail: @cut.detail, evaluation: @cut.evaluation, cut_image: Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/sample.png'), 'image/png')} }
-  #     expect(response).to redirect_to cuts_path
-  #   end
-  # end
+  describe "#update" do
+    before do
+      @user = FactoryBot.create(:user)
+      @cut = FactoryBot.create(:cut, user_id: @user.id)
+    end
+    it "正常に変更を更新を作成できているか？" do
+      sign_in @user
+      patch :update, params: {id: @cut.id,cut: {title: @cut.title, detail: @cut.detail, evaluation: @cut.evaluation, cut_image: Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/sample.png'), 'image/png')} }
+      expect(response).to redirect_to cuts_path
+    end
+  end
 
   describe "#destroy" do
     before do

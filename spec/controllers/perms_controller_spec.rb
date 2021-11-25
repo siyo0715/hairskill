@@ -92,6 +92,18 @@ RSpec.describe PermsController, type: :controller do
     end
   end
 
+  describe "#update" do
+    before do
+      @user = FactoryBot.create(:user)
+      @perm = FactoryBot.create(:perm, user_id: @user.id)
+    end
+    it "正常に変更を更新を作成できているか？" do
+      sign_in @user
+      patch :update, params: {id: @perm.id,perm: {title: @perm.title, detail: @perm.detail, evaluation: @perm.evaluation, perm_image: Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/sample.png'), 'image/png')} }
+      expect(response).to redirect_to perms_path
+    end
+  end
+
    describe "#destroy" do
     before do
       @user = FactoryBot.create(:user)
