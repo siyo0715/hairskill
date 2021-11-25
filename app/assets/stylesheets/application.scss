@@ -104,6 +104,8 @@ body {
   // footerのcss
   // ------------
 .footer{
+    position: absolute;
+    margin: 0;
     height: 150px;
     width: 100%;
     background-color: brown;
@@ -369,6 +371,7 @@ body {
   // ----------------------
   .information_page_zone {
     background-color: #FFFFCC;
+    height: 79vh;
   }
 
   .information_page_zone {
@@ -394,6 +397,10 @@ body {
 
   #arrow-right{
     margin-right: 30px;
+  }
+
+  .blink {
+    margin: 50px auto 50px auto;
   }
   // ----------------------
   // usersのフォーム類のcss
