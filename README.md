@@ -47,6 +47,10 @@
 ### 詳細設計
 <img width="986" alt="スクリーンショット 2021-11-17 23 55 00" src="https://user-images.githubusercontent.com/86521768/142224328-179f73df-3949-4d9a-bda3-4d9f808f4c2d.png">
 
+### 成果物の感想
+
+
+
 チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1FWOrS2cK1d-Fk9CpCJjvu5aGCFHk8eWRMc6uaofjIGU/edit#gid=0
 
