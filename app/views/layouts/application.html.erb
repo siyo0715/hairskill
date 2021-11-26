@@ -14,7 +14,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
   </head>
-  
+
   <body>
 
       <div class="header">
@@ -71,11 +71,6 @@
               <li class="">
                 <%= link_to new_user_session_path, class:"h-seni" do %>
                   <span>参加</span>
-                <% end %>
-              </li>
-              <li class="">
-                <%= link_to new_user_password_path, class:"h-seni" do %>
-                  <span>パスワード変更</span>
                 <% end %>
               </li>
               <li class="">
@@ -154,12 +149,6 @@
                 <%= link_to new_user_session_path, class:"f-seni" do %>
                   <span class="fas fa-sign-in-alt" style="display: block;"></span>
                   <span class="hurigana">参加</span>
-                <% end %>
-              </li>
-              <li class="">
-                <%= link_to new_user_password_path, class:"f-seni" do %>
-                  <span class="fas fa-user-edit" style="display: block;"></span>
-                  <span class="hurigana">変更</span>
                 <% end %>
               </li>
               <li class="">

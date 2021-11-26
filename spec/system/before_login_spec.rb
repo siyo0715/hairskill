@@ -82,12 +82,8 @@ describe 'ユーザログイン前のテスト' do
       sign_in_link = find_all('a')[3].native.inner_text
       expect(sign_in_link).to match(/参加/)
     end
-    it 'パスワード変更リンクが表示される: 左上から5番目のリンクが「パスワード変更」である' do
-      password_new_link = find_all('a')[4].native.inner_text
-      expect(password_new_link).to match(/パスワード変更/)
-    end
-    it '連絡リンクが表示される: 左上から6番目のリンクが「連絡」である' do
-      contact_link = find_all('a')[5].native.inner_text
+    it '連絡リンクが表示される: 左上から5番目のリンクが「連絡」である' do
+      contact_link = find_all('a')[4].native.inner_text
       expect(contact_link).to match(/連絡/)
     end
   end
