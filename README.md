@@ -39,7 +39,7 @@
 <img width="536" alt="スクリーンショット 2021-11-26 22 06 28" src="https://user-images.githubusercontent.com/86521768/143585730-fd988456-0165-44a1-955b-f39d022a3714.png">
 
 ### ER図1
-<img width="641" alt="スクリーンショット 2021-11-24 22 24 10" src="https://user-images.githubusercontent.com/86521768/143246919-5c04fe15-6dde-4b80-bb3c-d0d14642b641.png">
+<img width="605" alt="スクリーンショット 2021-11-27 23 33 19" src="https://user-images.githubusercontent.com/86521768/143685784-0b4751bf-2565-4a42-9011-8a0544908b1c.png">
 
 ### ER図2
 <img width="759" alt="スクリーンショット 2021-11-24 23 01 49" src="https://user-images.githubusercontent.com/86521768/143252744-affa8de2-1554-40a8-bd58-a9983eb554e8.png">
