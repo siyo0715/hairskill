@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-//---------------------------------
+//----------------------------------
 // グラデーションカラー用のmixin↓
-// --------------------------------
+// ---------------------------------
 @mixin g-c($color1,$color2) {
   background: linear-gradient($color1, $color2);
 }
