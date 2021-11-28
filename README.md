@@ -69,3 +69,9 @@ https://docs.google.com/spreadsheets/d/1FWOrS2cK1d-Fk9CpCJjvu5aGCFHk8eWRMc6uaofj
 
 - shuterstock
 - AdobeStock
+
+---------------------------------------------------------------------------------------------------------------
+
+## 私について
+
+https://github.com/siyo0715/siyo0715/blob/main/README.md
