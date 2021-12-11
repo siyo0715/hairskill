@@ -78,8 +78,7 @@ https://docs.google.com/spreadsheets/d/1FWOrS2cK1d-Fk9CpCJjvu5aGCFHk8eWRMc6uaofj
 ---------------------------------------------------------------------------------------------------------------
 ## インフラ設計図
 
-<img width="713" alt="スクリーンショット 2021-12-11 20 14 41" src="https://user-images.githubusercontent.com/86521768/145674518-21951405-7f66-4a32-8284-899afcefecc7.png">
-
+<img width="714" alt="スクリーンショット 2021-12-11 20 19 11" src="https://user-images.githubusercontent.com/86521768/145674580-a566ab1a-b73a-4180-97e9-dfd4c66af2a8.png">
 
 
 ---------------------------------------------------------------------------------------------------------------
