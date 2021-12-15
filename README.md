@@ -53,7 +53,7 @@
 <img width="986" alt="スクリーンショット 2021-11-17 23 55 00" src="https://user-images.githubusercontent.com/86521768/142224328-179f73df-3949-4d9a-bda3-4d9f808f4c2d.png">
 
 ### 成果物の感想
-<img width="603" alt="スクリーンショット 2021-11-26 23 06 59" src="https://user-images.githubusercontent.com/86521768/143593087-7c6a22db-6477-4a94-9a35-22b9f6e3aacf.png">
+<img width="607" alt="スクリーンショット 2021-12-15 16 41 56" src="https://user-images.githubusercontent.com/86521768/146144155-0437d3e9-85fd-4fc9-a3e2-8ea6cfca4453.png">
 
 
 チャレンジ要素一覧
