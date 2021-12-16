@@ -62,7 +62,7 @@ https://docs.google.com/spreadsheets/d/1FWOrS2cK1d-Fk9CpCJjvu5aGCFHk8eWRMc6uaofj
 ---------------------------------------------------------------------------------------------------------------
 
 ### 開発環境
-- OS：MacBook
+- OS：Linux(CentOS)
 - 言語：HTML,CSS,Scss,JavaScript,Ruby,SQLite
 - フレームワーク：Ruby on Rails
 - JSライブラリ：jQuery
