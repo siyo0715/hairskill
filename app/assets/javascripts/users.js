@@ -23,6 +23,7 @@ window.onload = function() {
         });
 
         arrowLeft.addEventListener('click', function() {
+          console.log("ok");
             sliderImages[current].style.display = 'none';
             if(current === 0){
                 current = sliderImages.length;
